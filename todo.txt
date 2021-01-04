@@ -1,0 +1,4 @@
+- use npm instead of /lib
+- clean code
+- read me
+- blog post sur idée tdd / short feedback loop applied to dictation

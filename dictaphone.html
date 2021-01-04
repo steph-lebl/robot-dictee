@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dictaphone</title>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
+  <script type="text/javascript" src="lib/linq.js_ver2.2.0.2/linq.js"></script>
+
+  <script type="text/javascript" src="dictaphone.js"></script>
+  <script type="text/javascript" src="util.js"></script>
+  <script type="text/javascript" src="config.js"></script>
+
+  <script type="text/javascript" src="viewModel.js"></script>
+  <script type="text/javascript" src="dictation.js"></script>
+  <script type="text/javascript" src="paragraph.js"></script>
+  <script type="text/javascript" src="segment.js"></script>
+  <script type="text/javascript" src="word.js"></script>
+  <script type="text/javascript" src="speechSynthesisTextToSpeechEngine.js"></script>
+
+  <LINK type="text/css" href="dictaphone.css" rel="stylesheet" >
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <h1><a class="title-link" href="./dictaphone.html">Monsieur Robot</a></h1>
+
+  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDicatation, ifnot:dictation()">
+    <h3>Créer la dictée</h3>
+    <textarea name="dictation-text" data-bind='value: newDictationText,valueUpdate: "afterkeydown"'></textarea>
+    <button data-bind="enable: newDictationText()" type="submit">Débuter</button>
+  </form>
+
+
+  <form name="typing-form" id="typing-form" onkeypress="return dictaphone.viewModel.onKeyPress(event)" data-bind="if:dictation()">
+
+    <div data-bind='foreach: dictation().paragraphs()'>
+      <div class="paragraph" data-bind='foreach: words()'>
+        <!-- ko if: isCommitted() -->
+          <!-- ko if:isMistake() -->
+          <table class="mistake">
+            <tbody>
+              <tr>
+                <td class="expected" data-bind="text:expected()"></td>
+              </tr>
+              <tr>
+                <td class="actual" data-bind="text:actual()"></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- /ko -->
+
+          <!-- ko ifnot:isMistake() -->
+            <!-- ko text: actual() -->
+            <!-- /ko -->
+          <!-- /ko -->
+        <!-- /ko -->
+      </div>
+    </div>      
+
+    <input type="text" name="currentWordText" autofocus data-bind='value: currentWordText, valueUpdate: "afterkeydown", visible:dictation().isFinished()===false'/>
+
+    <div data-bind='if:dictation().isFinished()'>
+      <hr>
+      <div>
+        <!-- ko if:dictation().noMistakes() -->
+        Sans fautes!
+        <!-- /ko -->
+
+        <!-- ko if:dictation().noMistakes() === false -->
+          <!-- ko if:dictation().avgNumOfWordsForOneMistake()>1 -->
+          En moyenne une faute chaque 
+          <span data-bind="text:dictation().avgNumOfWordsForOneMistake()"></span> 
+          mots.
+          <!-- /ko -->
+          
+          <!-- ko if:dictation().avgNumOfWordsForOneMistake()===1 -->
+          Aucun mot écrit correctement.
+          <!-- /ko -->
+        <!-- /ko -->
+      </div>
+      <a href="./dictaphone.html">Recommencer</a>
+    </div>
+  </form>
+
+
+  <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
