@@ -1,7 +1,7 @@
 (function(global){
   describe("Dictation (parsing)", function() {
     it("should be able to parse paragraphs from text", function() {
-      var dictation = global.dictaphone.createDictation("a\nb")
+      var dictation = global.robotDictee.createDictation("a\nb")
 
       expect(dictation.paragraphs().length).toBe(2);
     });
@@ -27,7 +27,7 @@
     });
 
     it("should merge double spaces", function() {
-      var dictation = global.dictaphone.createDictation("a  b   c");
+      var dictation = global.robotDictee.createDictation("a  b   c");
 
       expect(dictation.paragraphs()[0].words().length).toBe(3)
       expect(dictation.paragraphs()[0].words()[0].expected()).toBe("a")
@@ -35,7 +35,7 @@
       expect(dictation.paragraphs()[0].words()[2].expected()).toBe("c")
     });
     it("should parse segment delimiters with leading spaces from text", function() {
-      var dictation = global.dictaphone.createDictation("a .b  !c ?dont-care");
+      var dictation = global.robotDictee.createDictation("a .b  !c ?dont-care");
 
       expect(dictation.paragraphs()[0].segments().length).toBe(4)
       expect(dictation.paragraphs()[0].segments()[0].words()[0].expected()).toBe("a.")
@@ -43,7 +43,7 @@
       expect(dictation.paragraphs()[0].segments()[2].words()[0].expected()).toBe("c?")
     });
     it("should parse segment delimiters with trailing spaces from text", function() {
-      var dictation = global.dictaphone.createDictation("a. b!  c? dont-care");
+      var dictation = global.robotDictee.createDictation("a. b!  c? dont-care");
 
       expect(dictation.paragraphs()[0].segments().length).toBe(4)
       expect(dictation.paragraphs()[0].segments()[0].words()[0].expected()).toBe("a.")
@@ -52,7 +52,7 @@
     });
 
     it("should parse double segment delimiters", function() {
-      var dictation = global.dictaphone.createDictation("a!.b?!.c")
+      var dictation = global.robotDictee.createDictation("a!.b?!.c")
 
       expect(dictation.paragraphs().length).toBe(1);
       expect(dictation.paragraphs()[0].segments().length).toBe(3);
@@ -62,7 +62,7 @@
     });
 
     it("should replace demi-cadratin par un tiret", function() {
-      var dictation = global.dictaphone.createDictation("a — b")
+      var dictation = global.robotDictee.createDictation("a — b")
 
       expect(dictation.paragraphs().length).toBe(1);
       expect(dictation.paragraphs()[0].segments().length).toBe(1);
@@ -73,7 +73,7 @@
     });
 
    it("should replace the caracter '…' par '.'+'.'+'.'", function() {
-      var dictation = global.dictaphone.createDictation("…")
+      var dictation = global.robotDictee.createDictation("…")
 
       expect(dictation.paragraphs()[0].segments()[0].words()[0].expected()).toBe("...");
     });
@@ -84,7 +84,7 @@
 
   describe("Segment", function() {
     it("should say 5 first words.", function() {
-      var sut = global.dictaphone.createSegment("Un deux trois quatre cinq six")
+      var sut = global.robotDictee.createSegment("Un deux trois quatre cinq six")
 
       var actual = sut.words()[0];
 
@@ -93,7 +93,7 @@
     });
 
     it("should say 5 next words.", function() {
-      var sut = global.dictaphone.createSegment("Un deux trois quatre cinq six sept")
+      var sut = global.robotDictee.createSegment("Un deux trois quatre cinq six sept")
 
       var actual = sut.words()[1];
 
@@ -102,7 +102,7 @@
     });
 
     it("should say all remaining words if less than 5", function() {
-      var sut = global.dictaphone.createSegment("Un deux trois quatre cinq")
+      var sut = global.robotDictee.createSegment("Un deux trois quatre cinq")
 
       var actual = sut.words()[1];
 
@@ -111,7 +111,7 @@
     });
 
     it("should be able to say a single word", function() {
-      var sut = global.dictaphone.createSegment("Un")
+      var sut = global.robotDictee.createSegment("Un")
 
       var actual = sut.words()[0];
 
@@ -120,7 +120,7 @@
     });
 
     it("should be able to say the last word", function() {
-      var sut = global.dictaphone.createSegment("Un deux.")
+      var sut = global.robotDictee.createSegment("Un deux.")
 
       var actual = sut.words()[1];
 
@@ -130,7 +130,7 @@
 
 
     it("should say symbols explicitly", function() {
-      var sut = global.dictaphone.createSegment("a (b)")
+      var sut = global.robotDictee.createSegment("a (b)")
 
       var actual = sut.words()[0];
 
@@ -141,7 +141,7 @@
 
 //helpers
 function parseParagraphsABC(text){
-  var dictation = global.dictaphone.createDictation(text)
+  var dictation = global.robotDictee.createDictation(text)
 
   expect(dictation.paragraphs().length).toBe(3);
   expect(dictation.paragraphs()[0].words()[0].expected()).toBe("a")

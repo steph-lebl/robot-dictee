@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createWord=createWord;
+  global.robotDictee.createWord=createWord;
 
   function createWord(_expected, _segmentToSay, _sizeOfSegmentToSay){
     var _actual=ko.observable(null);

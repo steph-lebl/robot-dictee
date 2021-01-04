@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createGoogleTranslateTextToSpeechEngine=createGoogleTranslateTextToSpeechEngine;
+  global.robotDictee.createGoogleTranslateTextToSpeechEngine=createGoogleTranslateTextToSpeechEngine;
 
   function createGoogleTranslateTextToSpeechEngine() {
     var _maxLength=100;

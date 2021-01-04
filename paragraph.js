@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createParagraph=createParagraph;
+  global.robotDictee.createParagraph=createParagraph;
 
   function createParagraph(paragraphText){
     var _segments=createSegments(paragraphText);
@@ -13,13 +13,13 @@
 
       return Enumerable.From(segmentTexts)
         .Select(function(segmentText) {
-          return global.dictaphone.createSegment(segmentText);
+          return global.robotDictee.createSegment(segmentText);
         })
         .ToArray();
     }
 
     function splitIntoSegments(paragraphText){
-      var delimiter = global.dictaphone.config.segmentDelimitersRegEx;
+      var delimiter = global.robotDictee.config.segmentDelimitersRegEx;
       var segmentEndingWithDelimiter = "[^"+delimiter+"]*["+delimiter+"]+";
       var or = "|";
       var lastSegment="[^"+delimiter+"]+$";

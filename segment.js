@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createSegment=createSegment;
+  global.robotDictee.createSegment=createSegment;
 
   function createSegment(_segmentText){
     var _words=createWords();
@@ -26,7 +26,7 @@
       var segmentText = segmentWords.Aggregate(wordsToSayToSegmentText);
       var segmentToSay = createSegmentToSay(segmentText);
 
-      return global.dictaphone.createWord(wordText,segmentToSay,segmentWords.Count());
+      return global.robotDictee.createWord(wordText,segmentToSay,segmentWords.Count());
     }
 
     function getSegmentWords(wordTexts,wordIndex){
@@ -41,7 +41,7 @@
     }
 
     function createSegmentToSay(segmentText){
-      var pairs = global.dictaphone.config.patternRegExPatternToSayPairs;
+      var pairs = global.robotDictee.config.patternRegExPatternToSayPairs;
       var result = segmentText;
       for (var i = 0; i < pairs.length; i++) {
         var pair=pairs[i];

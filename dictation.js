@@ -1,8 +1,8 @@
 (function(global){
-  global.dictaphone.createDictation=createDictation;
+  global.robotDictee.createDictation=createDictation;
 
   function createDictation(text){
-    var _delimiter = global.dictaphone.config.segmentDelimitersRegEx;
+    var _delimiter = global.robotDictee.config.segmentDelimitersRegEx;
     var _paragraphs=createParagraphs();
     var _words=wordsFromParagraphs(_paragraphs);
     var _currentWordIndex=ko.observable(0);
@@ -156,7 +156,7 @@
       var paragraphTexts=simplifiedText.split('\n');
       return Enumerable.From(paragraphTexts)
         .Select(function(paragraphText) {
-          return global.dictaphone.createParagraph(paragraphText);
+          return global.robotDictee.createParagraph(paragraphText);
         })
         .ToArray();
     }

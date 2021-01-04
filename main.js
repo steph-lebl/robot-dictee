@@ -1,9 +1,9 @@
 (function(global){
 
-  var textToSpeechEngine = global.dictaphone.createSpeechSynthesisTextToSpeechEngine();
-  var viewModel = global.dictaphone.createViewModel(textToSpeechEngine);
+  var textToSpeechEngine = global.robotDictee.createSpeechSynthesisTextToSpeechEngine();
+  var viewModel = global.robotDictee.createViewModel(textToSpeechEngine);
 
-  global.dictaphone.viewModel=viewModel;//stle: global to allow for handling ENTER
+  global.robotDictee.viewModel=viewModel;//stle: global to allow for handling ENTER
 
   ko.applyBindings(viewModel);
 })(this)  

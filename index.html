@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dictaphone</title>
+  <title>robotDictee</title>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.2.1/knockout-min.js"></script>
   <script type="text/javascript" src="lib/linq.js_ver2.2.0.2/linq.js"></script>
 
-  <script type="text/javascript" src="dictaphone.js"></script>
+  <script type="text/javascript" src="robotDictee.js"></script>
   <script type="text/javascript" src="util.js"></script>
   <script type="text/javascript" src="config.js"></script>
 
@@ -16,11 +16,11 @@
   <script type="text/javascript" src="word.js"></script>
   <script type="text/javascript" src="speechSynthesisTextToSpeechEngine.js"></script>
 
-  <LINK type="text/css" href="dictaphone.css" rel="stylesheet" >
+  <LINK type="text/css" href="robotDictee.css" rel="stylesheet" >
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-  <h1><a class="title-link" href="./dictaphone.html">Monsieur Robot</a></h1>
+  <h1><a class="title-link" href="./robotDictee.html">Monsieur Robot</a></h1>
 
   <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDicatation, ifnot:dictation()">
     <h3>Créer la dictée</h3>
@@ -29,7 +29,7 @@
   </form>
 
 
-  <form name="typing-form" id="typing-form" onkeypress="return dictaphone.viewModel.onKeyPress(event)" data-bind="if:dictation()">
+  <form name="typing-form" id="typing-form" onkeypress="return robotDictee.viewModel.onKeyPress(event)" data-bind="if:dictation()">
 
     <div data-bind='foreach: dictation().paragraphs()'>
       <div class="paragraph" data-bind='foreach: words()'>
@@ -76,7 +76,7 @@
           <!-- /ko -->
         <!-- /ko -->
       </div>
-      <a href="./dictaphone.html">Recommencer</a>
+      <a href="./robotDictee.html">Recommencer</a>
     </div>
   </form>
 

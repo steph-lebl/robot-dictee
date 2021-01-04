@@ -1,3 +1,3 @@
 (function(global){
-  global.dictaphone={};
+  global.robotDictee={};
 })(this)  

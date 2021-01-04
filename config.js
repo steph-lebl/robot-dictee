@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.config={
+  global.robotDictee.config={
     segmentDelimitersRegEx:"\\.\\?!,",
     patternRegExPatternToSayPairs:[
       {

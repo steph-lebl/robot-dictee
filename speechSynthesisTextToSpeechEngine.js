@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createSpeechSynthesisTextToSpeechEngine=createSpeechSynthesisTextToSpeechEngine;
+  global.robotDictee.createSpeechSynthesisTextToSpeechEngine=createSpeechSynthesisTextToSpeechEngine;
 
   function createSpeechSynthesisTextToSpeechEngine() {
     return {

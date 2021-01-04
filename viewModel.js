@@ -1,5 +1,5 @@
 (function(global){
-  global.dictaphone.createViewModel=createViewModel;
+  global.robotDictee.createViewModel=createViewModel;
 
   function createViewModel(textToSpeechEngine){
     var _newDictationText = ko.observable("");
@@ -58,7 +58,7 @@
     });
 
     function createDicatation(){
-      var newDictation = global.dictaphone.createDictation(_newDictationText());
+      var newDictation = global.robotDictee.createDictation(_newDictationText());
 
       _dictation(newDictation);
       subscribeToSegmentSaid();
