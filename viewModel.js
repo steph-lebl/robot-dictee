@@ -19,7 +19,6 @@
     }
 
     function onCurrentWordTextChanged(newValue){
-      alert(`newValue: "${newValue}", current: "${_currentWordText()}", lastchar:"${getLastChar(_currentWordText())}"`)
       if(getLastChar(_currentWordText())==' '){
         commitWord();
       }
