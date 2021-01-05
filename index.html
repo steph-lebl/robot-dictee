@@ -31,7 +31,7 @@
 
   <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDicatation, ifnot:dictation()">
     <h3>Créer la dictée</h3>
-    <textarea name="dictation-text" data-bind='value: newDictationText,valueUpdate: "afterkeydown"'></textarea>
+    <textarea name="dictation-text" data-bind='textInput: newDictationText'></textarea>
     <button data-bind="enable: newDictationText()" type="submit">Débuter</button>
   </form>
 
@@ -62,7 +62,7 @@
       </div>
     </div>      
 
-    <input type="text" name="currentWordText" autofocus data-bind='value: currentWordText, valueUpdate: "afterkeydown", visible:dictation().isFinished()===false'/>
+    <input type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false'/>
 
     <div data-bind='if:dictation().isFinished()'>
       <hr>
