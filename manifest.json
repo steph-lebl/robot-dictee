@@ -1,6 +1,6 @@
 {
-    "name": "Robot Dictée",
-    "short_name": "Robot Dictée",
+    "name": "Robot dictée",
+    "short_name": "Robot dictée",
     "start_url": "/robot-dictee/",
     "scope": "/robot-dictee/",
     "display": "fullscreen"
