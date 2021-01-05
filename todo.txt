@@ -1,5 +1,12 @@
 - fix bug space sur iPad
 - boutton pour redire le dernier mot
+- enter hors focus
+- grosseur lettre
+- marge ipad et paysage
+- dictées prédéfinies
+- appostrophe mismatch
+- voix plus lente
+- découpage phrase avec ; 
 - Ajouter une icône: https://www.flaticon.com/fr/icone-gratuite/robot_2021646?term=robot&page=1&position=27&related_item_id=2021646
 - use npm instead of /lib
 - clean code
