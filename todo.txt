@@ -10,4 +10,5 @@
 - Ajouter une icône: https://www.flaticon.com/fr/icone-gratuite/robot_2021646?term=robot&page=1&position=27&related_item_id=2021646
 - use npm instead of /lib
 - clean code
+- review export/import
 - read me
