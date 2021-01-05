@@ -2,6 +2,7 @@
   global.robotDictee.createViewModel=createViewModel;
 
   function createViewModel(textToSpeechEngine){
+    var _predefinedDictations = ko.observable(global.robotDictee.predefinedDictations)
     var _newDictationText = ko.observable("");
     var _dictation = ko.observable();
     var _currentWordText = ko.observable("");
@@ -14,8 +15,10 @@
       currentWordText:_currentWordText,
       onKeyPress:onKeyPress,
 
+      predefinedDictations: _predefinedDictations,
+      usePredefinedDictation: usePredefinedDictation,
       newDictationText:_newDictationText,
-      createDicatation:createDicatation
+      createDictation:createDictation
     }
 
     function onCurrentWordTextChanged(newValue){
@@ -56,8 +59,16 @@
         return _dictation();
     });
 
-    function createDicatation(){
-      var newDictation = global.robotDictee.createDictation(_newDictationText());
+    function usePredefinedDictation(predefinedDictation){
+      startDictation(predefinedDictation.text);
+    }
+
+    function createDictation(){
+      startDictation(_newDictationText());
+    }
+
+    function startDictation(text){
+      var newDictation = global.robotDictee.createDictation(text);
 
       _dictation(newDictation);
       subscribeToSegmentSaid();

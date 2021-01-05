@@ -15,7 +15,8 @@
   <script type="text/javascript" src="segment.js"></script>
   <script type="text/javascript" src="word.js"></script>
   <script type="text/javascript" src="speechSynthesisTextToSpeechEngine.js"></script>
-
+  <script type="text/javascript" src="predefinedDictations.js"></script>
+  
   <LINK type="text/css" href="robotDictee.css" rel="stylesheet" >
 
     <link rel="manifest" href="manifest.json" />
@@ -29,10 +30,17 @@
 <body>
   <h1><a class="title-link" href="./index.html">Robot dictée</a></h1>
 
-  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDicatation, ifnot:dictation()">
-    <h3>Créer la dictée</h3>
+  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, ifnot:dictation()">
+    <h3>Dictées</h3>
+
+    <div data-bind="foreach: predefinedDictations">
+      <!-- ko if: $index() > 0 -->|<!-- /ko -->
+      <a href="" data-bind="text: title, click: $parent.usePredefinedDictation"></a>
+    </div>
+
+    <h3>Dictée sur mesure</h3>
     <textarea name="dictation-text" data-bind='textInput: newDictationText'></textarea>
-    <button data-bind="enable: newDictationText()" type="submit">Débuter</button>
+    <button data-bind="enable: newDictationText()" type="submit">Créer</button>
   </form>
 
 
