@@ -19,7 +19,7 @@
     }
 
     function onCurrentWordTextChanged(newValue){
-      console.log(`newValue: "${newValue}", current: "${_currentWordText()}", lastchar:"${getLastChar(_currentWordText())}"`)
+      alert(`newValue: "${newValue}", current: "${_currentWordText()}", lastchar:"${getLastChar(_currentWordText())}"`)
       if(getLastChar(_currentWordText())==' '){
         commitWord();
       }
