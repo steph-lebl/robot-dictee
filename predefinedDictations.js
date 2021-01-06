@@ -76,10 +76,6 @@
       {
         title:'Son "ill"',
         text:'Le soleil brille à travers le vitrail; une merveille! La fille boit son jus avec une paille. Sur ma feuille, je dessine un écureuil, une grenouille et un papillon. Je cherche mes crayons. Je suis joyeux. Je pars en voyage découvrir un nouveau pays.'
-      },
-      {
-        title:'Son "o"',
-        text:''
       }
     ]
   
