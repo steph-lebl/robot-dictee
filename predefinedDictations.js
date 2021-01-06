@@ -40,7 +40,6 @@
         title:'Son "z"',
         text:'Je mange des raisins et des fraises dans la cuisine. Ma cousine porte une blouse rose et une jupe grise. Il fait zéro degré.'
       },
-
       {
         title:'Son "j"',
         text:'La gentille magicienne jongle avec des oranges. Les jumeaux jouent dans le jardin tous les jours.'
@@ -61,6 +60,27 @@
         title:'Son "eu"',
         text:'Ma soeur veut un oeuf au déjeuner. Cette jeune chanteuse est heureuse, car elle a reçu des fleurs bleues.'
       },
+
+      {
+        title:'Sons "un" et "oi"',
+        text:'J\'ai vu trois étoiles filantes lundi soir. Il y a aucun oiseau brun dans ce bois.'
+      },
+      {
+        title:'Son "oin"',
+        text:'Je prends soin des animaux. Mon oncle qui habite au loin téléphone au moins une fois par semaine.'
+      },
+      {
+        title:'Son "in"',
+        text:'Mon cousin portera son imperméable demain. Mon chien n\'a plus faim. Il a le ventre plein.'
+      },
+      {
+        title:'Son "ill"',
+        text:'Le soleil brille à travers le vitrail; une merveille! La fille boit son jus avec une paille. Sur ma feuille, je dessine un écureuil, une grenouille et un papillon. Je cherche mes crayons. Je suis joyeux. Je pars en voyage découvrir un nouveau pays.'
+      },
+      {
+        title:'Son "o"',
+        text:''
+      }
     ]
   
   })(this)  
