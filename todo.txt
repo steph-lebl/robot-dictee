@@ -1,8 +1,5 @@
-- toutes les dictés de 2e années
-- désactiver lettre majuscule; auto correcteur
-- désactiver auto correcteur
 - Ajouter une icône: https://www.flaticon.com/fr/icone-gratuite/robot_2021646?term=robot&page=1&position=27&related_item_id=2021646
-- procédure pour installer PWA
+- procédure pour installer PWA et documenter désactiver auto correcteur
 - appostrophe mismatch
 - découpage phrase avec ; 
 - use npm instead of /lib
