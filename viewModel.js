@@ -36,8 +36,9 @@
       _dictation().commitCurrentWord(valueToCommit);
     }
 
-    function sayCurrentSegment(){
+    function sayCurrentSegment(event){
       _dictation().sayCurrentSegment();
+      document.getElementById("currentWordText").focus();
     }
 
 
