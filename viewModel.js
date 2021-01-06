@@ -13,12 +13,11 @@
     return {
       dictation:_dictation,
       currentWordText:_currentWordText,
-      onKeyPress:onKeyPress,
-
       predefinedDictations: _predefinedDictations,
       usePredefinedDictation: usePredefinedDictation,
       newDictationText:_newDictationText,
-      createDictation:createDictation
+      createDictation:createDictation,
+      sayCurrentSegment:sayCurrentSegment
     }
 
     function onCurrentWordTextChanged(newValue){
@@ -35,13 +34,6 @@
       var valueToCommit = _currentWordText().rtrim();
       _currentWordText("");
       _dictation().commitCurrentWord(valueToCommit);
-    }
-
-    function onKeyPress(event){
-      if(event.keyCode!=13){ return true; }
-      
-      sayCurrentSegment();
-      return false; //never send the ENTER key press
     }
 
     function sayCurrentSegment(){

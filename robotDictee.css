@@ -55,3 +55,8 @@ body{
 button, input, textarea{
   font-size: 100%;
 }
+
+#repeat-button{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
