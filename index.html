@@ -28,86 +28,95 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 </head>
 <body>
-  <h1><a class="title-link" href="./index.html">Robot dictée</a></h1>
-  <a href="./index.html">Accueil</a> |
-  <!-- <a href="" data-bind="click: showMobileInstruction">Mobile</a> | -->
-  <a href="" data-bind="click: showCredits">Crédits</a>
+  <div class="header">
+  <a id="mainTitle" href="./index.html">
+    <img src="./robot-64.png">
+  </a>
+  <a id="mainTitle" href="./index.html">
+    <h1>Robot Dictée</h1>
+  </a>
+  <div class="header-right">
+    <a class="active" href="./index.html">Accueil</a>
+    <a href="" data-bind="click: showCredits">À propos</a>
+  </div>
+</div>
 
-  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, if:currentPage()==='newDictation'">
-    <h3>Dictées</h3>
+  <div id="activePage">
+    <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, if:currentPage()==='newDictation'">
+      <h3>Dictées</h3>
 
-    <div data-bind="foreach: predefinedDictations">
-      <!-- ko if: $index() > 0 -->|<!-- /ko -->
-      <a href="" data-bind="text: title, click: $parent.usePredefinedDictation"></a>
-    </div>
+      <div data-bind="foreach: predefinedDictations">
+        <!-- ko if: $index() > 0 -->|<!-- /ko -->
+        <a href="" data-bind="text: title, click: $parent.usePredefinedDictation"></a>
+      </div>
 
-    <h3>Dictée sur mesure</h3>
-    <textarea name="dictation-text" data-bind='textInput: newDictationText'></textarea>
-    <button data-bind="enable: newDictationText()" type="submit">Créer</button>
-  </form>
+      <h3>Dictée sur mesure</h3>
+      <textarea name="dictation-text" data-bind='textInput: newDictationText'></textarea>
+      <button data-bind="enable: newDictationText()" type="submit">Créer</button>
+    </form>
 
-  
-  <form name="typing-form" id="typing-form" data-bind="submit: sayCurrentSegment, if:currentPage()==='dictation'">
+    
+    <form name="typing-form" id="typing-form" data-bind="submit: sayCurrentSegment, if:currentPage()==='dictation'">
 
-    <div data-bind='foreach: dictation().paragraphs()'>
-      <div class="paragraph" data-bind='foreach: words()'>
-        <!-- ko if: isCommitted() -->
-          <!-- ko if:isMistake() -->
-          <table class="mistake">
-            <tbody>
-              <tr>
-                <td class="expected" data-bind="text:expected()"></td>
-              </tr>
-              <tr>
-                <td class="actual" data-bind="text:actual()"></td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- /ko -->
+      <div data-bind='foreach: dictation().paragraphs()'>
+        <div class="paragraph" data-bind='foreach: words()'>
+          <!-- ko if: isCommitted() -->
+            <!-- ko if:isMistake() -->
+            <table class="mistake">
+              <tbody>
+                <tr>
+                  <td class="expected" data-bind="text:expected()"></td>
+                </tr>
+                <tr>
+                  <td class="actual" data-bind="text:actual()"></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- /ko -->
 
-          <!-- ko ifnot:isMistake() -->
-            <!-- ko text: actual() -->
+            <!-- ko ifnot:isMistake() -->
+              <!-- ko text: actual() -->
+              <!-- /ko -->
             <!-- /ko -->
           <!-- /ko -->
-        <!-- /ko -->
-      </div>
-    </div>      
+        </div>
+      </div>      
 
-    <input id="currentWordText" type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false'/>
+      <input id="currentWordText" type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false'/>
 
-    <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
+      <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
 
-    <div data-bind='if:dictation().isFinished()'>
-      <hr>
-      <div>
-        <!-- ko if:dictation().noMistakes() -->
-        Sans fautes!
-        <!-- /ko -->
-
-        <!-- ko if:dictation().noMistakes() === false -->
-          <!-- ko if:dictation().avgNumOfWordsForOneMistake()>1 -->
-          En moyenne une faute chaque 
-          <span data-bind="text:dictation().avgNumOfWordsForOneMistake()"></span> 
-          mots.
+      <div data-bind='if:dictation().isFinished()'>
+        <hr>
+        <div>
+          <!-- ko if:dictation().noMistakes() -->
+          Sans fautes!
           <!-- /ko -->
-          
-          <!-- ko if:dictation().avgNumOfWordsForOneMistake()===1 -->
-          Aucun mot écrit correctement.
+
+          <!-- ko if:dictation().noMistakes() === false -->
+            <!-- ko if:dictation().avgNumOfWordsForOneMistake()>1 -->
+            En moyenne une faute chaque 
+            <span data-bind="text:dictation().avgNumOfWordsForOneMistake()"></span> 
+            mots.
+            <!-- /ko -->
+            
+            <!-- ko if:dictation().avgNumOfWordsForOneMistake()===1 -->
+            Aucun mot écrit correctement.
+            <!-- /ko -->
           <!-- /ko -->
-        <!-- /ko -->
+        </div>
+        <a href="./index.html">Commencer une nouvelle dictée</a>
       </div>
-      <a href="./index.html">Commencer une nouvelle dictée</a>
+    </form>
+
+    <div data-bind="if:currentPage()==='credits'">
+      <div class="credit-category">Conception</div>
+      Stéphane Leblanc
+      <div class="credit-category">Assurance qualité</div>
+      Éléonore Leblanc
+      <div class="credit-category">Icônes</div>
+      <a href="https://www.flaticon.com/fr/auteurs/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a>
     </div>
-  </form>
-
-  <div data-bind="if:currentPage()==='credits'">
-    <h3>Crédits</h3>
-    <div class="credit-category">Conception</div>
-    Stéphane Leblanc
-    <div class="credit-category">Assurance qualité</div>
-    Éléonore Leblanc
-    <div class="credit-category">Icônes</div>
-    <a href="https://www.flaticon.com/fr/auteurs/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a>
   </div>
 
   <script type="text/javascript" src="main.js"></script>

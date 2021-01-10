@@ -24,14 +24,9 @@
 }
 
 body{
-  /*alternative monospace common webfonts*/
-  /*font-family: "Lucida Console"*/
-  /*font-family: "Verdana"*/
-  /*font-family: "Courier New"*/
-  /*font-family: "Lucida Sans Unicode"*/
   font-family: "Consolas";
-  margin-left: 5%; 
-  margin-right: 5%; 
+  margin-left: 50px; 
+  margin-right: 50px; 
   padding: 0%; 
   font-size: 150%;
 
@@ -69,3 +64,32 @@ button, input, textarea{
 h3{
   margin-bottom: 0px;
 }
+.header {
+  overflow: hidden;
+}
+
+.header img{
+  float: left;
+}
+
+.header a{
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  line-height: 64px;
+}
+
+.header h1, .header img{
+    padding: 0px;
+    margin: 0px;
+}
+
+#mainTitle{
+    text-decoration: none;
+}
+
+.header-right {
+  float: right;
+}
+
