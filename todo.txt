@@ -6,3 +6,5 @@
 - clean code
 - review export/import
 - read me
+
+- procédure pour installer PWA et documenter désactiver autocorrecteur

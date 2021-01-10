@@ -7,6 +7,7 @@
     var _dictation = ko.observable();
     var _currentWordText = ko.observable("");
     var _segmentSaidSubscription=null;
+    var _currentPage =  ko.observable('newDictation');
 
     _currentWordText.subscribe(onCurrentWordTextChanged);
 
@@ -17,7 +18,9 @@
       usePredefinedDictation: usePredefinedDictation,
       newDictationText:_newDictationText,
       createDictation:createDictation,
-      sayCurrentSegment:sayCurrentSegment
+      sayCurrentSegment:sayCurrentSegment,
+      showCredits:showCredits,
+      currentPage:_currentPage
     }
 
     function onCurrentWordTextChanged(newValue){
@@ -64,8 +67,9 @@
       var newDictation = global.robotDictee.createDictation(text);
 
       _dictation(newDictation);
-      subscribeToSegmentSaid();
+      _currentPage("dictation");
 
+      subscribeToSegmentSaid();
       sayCurrentSegment();
     }
 
@@ -74,6 +78,10 @@
         _segmentSaidSubscription.dispose();
       }
       _segmentSaidSubscription=_dictation().segmentSaid.subscribe(onSegmentSaid);
+    }
+
+    function showCredits(){
+      _currentPage("credits");
     }
   }
 })(this)  

@@ -29,8 +29,11 @@
 </head>
 <body>
   <h1><a class="title-link" href="./index.html">Robot dictée</a></h1>
+  <a href="./index.html">Accueil</a> |
+  <!-- <a href="" data-bind="click: showMobileInstruction">Mobile</a> | -->
+  <a href="" data-bind="click: showCredits">Crédits</a>
 
-  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, ifnot:dictation()">
+  <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, if:currentPage()==='newDictation'">
     <h3>Dictées</h3>
 
     <div data-bind="foreach: predefinedDictations">
@@ -44,7 +47,7 @@
   </form>
 
   
-  <form name="typing-form" id="typing-form" data-bind="submit: sayCurrentSegment, if:dictation()">
+  <form name="typing-form" id="typing-form" data-bind="submit: sayCurrentSegment, if:currentPage()==='dictation'">
 
     <div data-bind='foreach: dictation().paragraphs()'>
       <div class="paragraph" data-bind='foreach: words()'>
@@ -93,10 +96,19 @@
           <!-- /ko -->
         <!-- /ko -->
       </div>
-      <a href="./index.html">Recommencer</a>
+      <a href="./index.html">Commencer une nouvelle dictée</a>
     </div>
   </form>
 
+  <div data-bind="if:currentPage()==='credits'">
+    <h3>Crédits</h3>
+    <div class="credit-category">Conception</div>
+    Stéphane Leblanc
+    <div class="credit-category">Assurance qualité</div>
+    Éléonore Leblanc
+    <div class="credit-category">Icônes</div>
+    <a href="https://www.flaticon.com/fr/auteurs/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a>
+  </div>
 
   <script type="text/javascript" src="main.js"></script>
 
