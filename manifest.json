@@ -6,7 +6,7 @@
     "display": "fullscreen",
     "icons": [
         {
-          "src": "robot-64.png",
+          "src": "./robot-64.png",
           "sizes": "64x64",
           "type": "image/png"
         }
