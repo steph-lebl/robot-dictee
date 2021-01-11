@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Robot dictée</title>
+  <title>Robot Dictée</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/linq.js/2.2.0.2/linq.min.js"></script>
 
@@ -18,6 +18,9 @@
   <script type="text/javascript" src="predefinedDictations.js"></script>
   
   <LINK type="text/css" href="robotDictee.css" rel="stylesheet" >
+  <link rel="icon" 
+  type="image/png" 
+  href="./robot-64.png">
 
     <link rel="manifest" href="manifest.json" />
     <!-- include PWACompat _after_ your manifest -->
@@ -36,8 +39,9 @@
     <h1>Robot Dictée</h1>
   </a>
   <div class="header-right">
-    <a class="active" href="./index.html">Accueil</a>
-    <a href="" data-bind="click: showCredits">À propos</a>
+    <a href="./index.html">Accueil</a>
+    <a href="" data-bind="click: showMobileHowToPage">Mobile</a>
+    <a href="" data-bind="click: showAboutPage">À propos</a>
   </div>
 </div>
 
@@ -109,14 +113,33 @@
       </div>
     </form>
 
-    <div data-bind="if:currentPage()==='credits'">
-      <div class="credit-category">Conception</div>
+    <div data-bind="if:currentPage()==='mobileHowTo'">
+      <h3>iPhone et iPad</h3>
+      <ol>
+        <li>Visiter <a href="./index.html">Robot Dictée</a> avec Safari.</li>
+        <li>Ajouter Robot Dictée sur l'écran d'accueil.</li>
+        <li>Ouvrir Robot Dictée à partir de l'écran d'accueil et Robot Dictée s'ouvrira en mode App.</li>
+      </ol>
+      <div>L'autocorrecteur, c'est de la triche! Avant l'utilisation de Robot Dictée, <a href="https://support.apple.com/fr-fr/HT207525">désactiver</a> Majuscules automatique, Correction automatique et Prédiction.</div>
+
+      <h3>Android</h3>
+      <ol>
+        <li>Visiter <a href="./index.html">Robot Dictée</a> avec Chrome.</li>
+        <li>Ajouter Robot Dictée sur l'écran d'accueil.</li>
+        <li>Ouvrir Robot Dictée à partir de l'écran d'accueil et Robot Dictée s'ouvrira en mode App.</li>
+      </ol>
+      <div>L'autocorrecteur, c'est de la triche! Avant l'utilisation de Robot Dictée, <a href="https://www.20minutes.fr/high-tech/2804467-20200621-comment-desactiver-la-correction-automatique-de-votre-clavier-de-smartphone">désactiver</a> Majuscules automatique, Correction automatique et Prédiction.</div>
+    </div>
+
+    <div data-bind="if:currentPage()==='about'">
+      <h3>Conception</h3>
       Stéphane Leblanc
-      <div class="credit-category">Assurance qualité</div>
+      <h3>Assurance qualité</h3>
       Éléonore Leblanc
-      <div class="credit-category">Icônes</div>
+      <h3>Icônes</h3>
       <a href="https://www.flaticon.com/fr/auteurs/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a>
     </div>
+
   </div>
 
   <script type="text/javascript" src="main.js"></script>

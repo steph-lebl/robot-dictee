@@ -1,7 +1,0 @@
-{
-    "name": "Robot Dictée",
-    "short_name": "Robot Dictée",
-    "start_url": "/robot-dictee/",
-    "scope": "/robot-dictee/",
-    "display": "fullscreen"
-}

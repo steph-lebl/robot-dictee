@@ -15,11 +15,12 @@
       dictation:_dictation,
       currentWordText:_currentWordText,
       predefinedDictations: _predefinedDictations,
-      usePredefinedDictation: usePredefinedDictation,
+      usePredefinedDictation,
       newDictationText:_newDictationText,
-      createDictation:createDictation,
-      sayCurrentSegment:sayCurrentSegment,
-      showCredits:showCredits,
+      createDictation,
+      sayCurrentSegment,
+      showAboutPage,
+      showMobileHowToPage,
       currentPage:_currentPage
     }
 
@@ -80,8 +81,12 @@
       _segmentSaidSubscription=_dictation().segmentSaid.subscribe(onSegmentSaid);
     }
 
-    function showCredits(){
-      _currentPage("credits");
+    function showAboutPage(){
+      _currentPage("about");
+    }
+
+    function showMobileHowToPage(){
+      _currentPage("mobileHowTo");
     }
   }
 })(this)  

@@ -3,5 +3,12 @@
     "short_name": "Robot dictée",
     "start_url": "/robot-dictee/",
     "scope": "/robot-dictee/",
-    "display": "fullscreen"
+    "display": "fullscreen",
+    "icons": [
+        {
+          "src": "robot-64.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        }
+    ]
 }
