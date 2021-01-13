@@ -98,18 +98,6 @@
           <!-- ko if:dictation().noMistakes() -->
           Sans fautes!
           <!-- /ko -->
-
-          <!-- ko if:dictation().noMistakes() === false -->
-            <!-- ko if:dictation().avgNumOfWordsForOneMistake()>1 -->
-            En moyenne une faute chaque 
-            <span data-bind="text:dictation().avgNumOfWordsForOneMistake()"></span> 
-            mots.
-            <!-- /ko -->
-            
-            <!-- ko if:dictation().avgNumOfWordsForOneMistake()===1 -->
-            Aucun mot écrit correctement.
-            <!-- /ko -->
-          <!-- /ko -->
         </div>
         <a href="./index.html">Commencer une nouvelle dictée</a>
       </div>
