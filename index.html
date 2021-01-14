@@ -63,6 +63,15 @@
 
     
     <form name="typing-form" id="typing-form" data-bind="submit: sayCurrentSegment, if:currentPage()==='dictation'">
+      
+      <div id="instructions" data-bind='if:dictation().isStarted()===false'>
+        <div>  
+          Écrire les mots un après l'autre avec des espaces.
+        </div>  
+        <div>  
+          Appuyer sur ENTER pour répéter les prochains mots.
+        </div>  
+      </div>
 
       <div data-bind='foreach: dictation().paragraphs()'>
         <div class="paragraph" data-bind='foreach: words()'>

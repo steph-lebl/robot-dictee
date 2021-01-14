@@ -6,6 +6,9 @@
     var _paragraphs=createParagraphs();
     var _words=wordsFromParagraphs(_paragraphs);
     var _currentWordIndex=ko.observable(0);
+    var isStarted = ko.computed(function() {
+      return _currentWordIndex()>0;
+    });
     var isFinished = ko.computed(function() {
         return _currentWordIndex()===_words.length;
     });
@@ -14,13 +17,14 @@
     _segmentSaid.extend({ notify: 'always' });
 
     return {
-      paragraphs:paragraphs,
-      commitCurrentWord:commitCurrentWord,
-      sayCurrentSegment:sayCurrentSegment,
+      paragraphs,
+      commitCurrentWord,
+      sayCurrentSegment,
       segmentSaid:_segmentSaid,
-      isFinished:isFinished, 
-      avgNumOfWordsForOneMistake:avgNumOfWordsForOneMistake,
-      noMistakes:noMistakes
+      isStarted,
+      isFinished, 
+      avgNumOfWordsForOneMistake,
+      noMistakes
     }
 
     function paragraphs(){
