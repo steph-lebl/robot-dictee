@@ -1,25 +1,26 @@
 (function (global) {
   global.robotDictee.predefinedDictations = [
     {
-      "title": "Thème 2 - Semaine 1",
-      "text": "bord but chant doigt droit droite fond haut méchant méchante mort morte nid pot rat rate renard renarde retard rond ronde salut"
+      title: `Semaine 1`,
+      text: `bord\nbut\nchant\ndoigt\ndroit\ndroite\nfond\nhaut\nméchant\nméchante\nmort\nmorte\nnid\npot\nrat\nrate\nrenard\nrenarde\nretard\nrond\nronde\nsalut`
     },
     {
-      "title": "Thème 2 - Semaine 2",
-      "text": "ajout alphabet argent court courte dos épais épaisse gentil gentille important importante mauvais mauvaise minuit ouvert ouverte part point précis précise sabot sourcil"
+      title: `Semaine 2`,
+      text: `ajout\nalphabet\nargent\ncourt\ncourte\ndos\népais\népaisse\ngentil\ngentille\nimportant\nimportante\nmauvais\nmauvaise\nminuit\nouvert\nouverte\npart\npoint\nprécis\nprécise\nsabot\nsourcil`
     },
     {
-      "title": "Thème 2 - Semaine 3",
-      "text": "ampoule champ combien comprendre compter décembre embrasser ensemble exemple jambe longtemps nombre novembre ombre remplir sembler septembre"
+      title: `Semaine 3`,
+      text: `ampoule\nchamp\ncombien\ncomprendre\ncompter\ndécembre\nembrasser\nensemble\nexemple\njambe\nlongtemps\nnombre\nnovembre\nombre\nremplir\nsembler\nseptembre`
     },
     {
-      "title": "Thème 2 - Semaine 4",
-      "text": "bande barbe cuisine danse demande demie libre maladie mine murmure pâle partie perdre pile poudre timide vivre voiture vue"
+      title: `Semaine 4`,
+      text: `bande\nbarbe\ncuisine\ndanse\ndemande\ndemie\nlibre\nmaladie\nmine\nmurmure\npâle\npartie\nperdre\npile\npoudre\ntimide\nvivre\nvoiture\nvue`
     },
     {
-      "title": "Thème 2 - Semaine 5",
-      "text": "âge changer danger genou genre jeter jeune ménage nuage passage village bonjour janvier joue jus rejoindre"
+      title: `Semaine 5`,
+      text: `âge\nchanger\ndanger\ngenou\ngenre\njeter\njeune\nménage\nnuage\npassage\nvillage\nbonjour\njanvier\njoue\njus\nrejoindre`
     }
+
     /*      
     
     
