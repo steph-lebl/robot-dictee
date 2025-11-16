@@ -1,9 +1,25 @@
 (function (global) {
   global.robotDictee.predefinedDictations = [
     {
-      title: 'Thème 2 - semaine 5',
-      text: `âge changer danger genou genre jeter jeune ménage nuage passage village bonjour janvier joue jus rejoindre`
+      "title": "Thème 2 - Semaine 1",
+      "text": "bord but chant doigt droit droite fond haut méchant méchante mort morte nid pot rat rate renard renarde retard rond ronde salut"
     },
+    {
+      "title": "Thème 2 - Semaine 2",
+      "text": "ajout alphabet argent court courte dos épais épaisse gentil gentille important importante mauvais mauvaise minuit ouvert ouverte part point précis précise sabot sourcil"
+    },
+    {
+      "title": "Thème 2 - Semaine 3",
+      "text": "ampoule champ combien comprendre compter décembre embrasser ensemble exemple jambe longtemps nombre novembre ombre remplir sembler septembre"
+    },
+    {
+      "title": "Thème 2 - Semaine 4",
+      "text": "bande barbe cuisine danse demande demie libre maladie mine murmure pâle partie perdre pile poudre timide vivre voiture vue"
+    },
+    {
+      "title": "Thème 2 - Semaine 5",
+      "text": "âge changer danger genou genre jeter jeune ménage nuage passage village bonjour janvier joue jus rejoindre"
+    }
     /*      
     
     
