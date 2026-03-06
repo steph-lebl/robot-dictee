@@ -21,7 +21,9 @@
       sayCurrentSegment,
       showAboutPage,
       showMobileHowToPage,
-      currentPage:_currentPage
+      currentPage:_currentPage,
+      availableVoices: textToSpeechEngine.availableVoices,
+      selectedVoice: textToSpeechEngine.selectedVoice
     }
 
     function onCurrentWordTextChanged(newValue){

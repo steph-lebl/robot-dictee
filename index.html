@@ -101,6 +101,11 @@
 
       <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
 
+      <div id="voice-selector">
+        <label for="voiceSelect">Voix : </label>
+        <select id="voiceSelect" data-bind="options: availableVoices, optionsText: function(v){ return v.name + ' (' + v.lang + ')'; }, value: selectedVoice"></select>
+      </div>
+
       <div data-bind='if:dictation().isFinished()'>
         <hr>
         <div>

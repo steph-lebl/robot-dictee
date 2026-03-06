@@ -88,3 +88,11 @@ h3{
   float: right;
 }
 
+#voice-selector {
+  margin-top: 10px;
+}
+
+#voice-selector select {
+  font-size: 80%;
+}
+
