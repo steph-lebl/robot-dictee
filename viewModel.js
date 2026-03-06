@@ -57,10 +57,16 @@
     });
 
     function usePredefinedDictation(predefinedDictation){
+      if(predefinedDictation.audioMap){
+        textToSpeechEngine = global.robotDictee.createStaticAudioTextToSpeechEngine(predefinedDictation.audioMap);
+      } else {
+        textToSpeechEngine = global.robotDictee.createSpeechSynthesisTextToSpeechEngine();
+      }
       startDictation(predefinedDictation.text);
     }
 
     function createDictation(){
+      textToSpeechEngine = global.robotDictee.createSpeechSynthesisTextToSpeechEngine();
       startDictation(_newDictationText());
     }
 
