@@ -99,11 +99,12 @@
 
       <input id="currentWordText" type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false'/>
 
-      <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
-
-      <div id="voice-selector">
-        <label for="voiceSelect">Voix : </label>
-        <select id="voiceSelect" data-bind="options: availableVoices, optionsText: function(v){ return v.name + ' (' + v.lang + ')'; }, value: selectedVoice"></select>
+      <div id="controls-bar">
+        <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
+        <div id="voice-selector">
+          <button type="button" data-bind="click: toggleVoiceSelector">Voix</button>
+          <select id="voiceSelect" data-bind="options: availableVoices, optionsText: function(v){ return v.name + ' (' + v.lang + ')'; }, value: selectedVoice, visible: showVoiceSelector"></select>
+        </div>
       </div>
 
       <div data-bind='if:dictation().isFinished()'>

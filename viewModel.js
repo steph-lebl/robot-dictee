@@ -8,6 +8,7 @@
     var _currentWordText = ko.observable("");
     var _segmentSaidSubscription=null;
     var _currentPage =  ko.observable('newDictation');
+    var _showVoiceSelector = ko.observable(false);
 
     _currentWordText.subscribe(onCurrentWordTextChanged);
 
@@ -23,7 +24,9 @@
       showMobileHowToPage,
       currentPage:_currentPage,
       availableVoices: textToSpeechEngine.availableVoices,
-      selectedVoice: textToSpeechEngine.selectedVoice
+      selectedVoice: textToSpeechEngine.selectedVoice,
+      showVoiceSelector: _showVoiceSelector,
+      toggleVoiceSelector: function(){ _showVoiceSelector(!_showVoiceSelector()); }
     }
 
     function onCurrentWordTextChanged(newValue){

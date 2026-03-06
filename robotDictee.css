@@ -52,8 +52,7 @@ button, input, textarea{
 }
 
 #repeat-button{
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin: 0;
 }
 
 h3{
@@ -88,11 +87,21 @@ h3{
   float: right;
 }
 
+#controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 #voice-selector {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 
 #voice-selector select {
   font-size: 80%;
+  margin-left: 5px;
 }
 
