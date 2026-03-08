@@ -3,6 +3,20 @@
 
   function createViewModel(textToSpeechEngine){
     var _predefinedDictations = ko.observable(global.robotDictee.predefinedDictations)
+    var _groupedDictations = ko.computed(function() {
+      var groups = {};
+      var order = [];
+      (_predefinedDictations() || []).forEach(function(d) {
+        var match = d.title.match(/^(Thème \d+)/);
+        var theme = match ? match[1] : 'Autres';
+        if (!groups[theme]) {
+          groups[theme] = { theme: theme, dictations: [] };
+          order.push(theme);
+        }
+        groups[theme].dictations.push(d);
+      });
+      return order.map(function(t) { return groups[t]; });
+    })
     var _newDictationText = ko.observable("");
     var _dictation = ko.observable();
     var _currentWordText = ko.observable("");
@@ -15,6 +29,7 @@
       dictation:_dictation,
       currentWordText:_currentWordText,
       predefinedDictations: _predefinedDictations,
+      groupedDictations: _groupedDictations,
       usePredefinedDictation,
       newDictationText:_newDictationText,
       createDictation,
@@ -57,10 +72,16 @@
     });
 
     function usePredefinedDictation(predefinedDictation){
+      if(predefinedDictation.audioMap){
+        textToSpeechEngine = global.robotDictee.createStaticAudioTextToSpeechEngine(predefinedDictation.audioMap);
+      } else {
+        textToSpeechEngine = global.robotDictee.createSpeechSynthesisTextToSpeechEngine();
+      }
       startDictation(predefinedDictation.text);
     }
 
     function createDictation(){
+      textToSpeechEngine = global.robotDictee.createSpeechSynthesisTextToSpeechEngine();
       startDictation(_newDictationText());
     }
 

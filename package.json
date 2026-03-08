@@ -1,0 +1,24 @@
+{
+  "name": "robot-dictee",
+  "version": "1.0.0",
+  "description": "Robot Dictée permet de faire une dictée de manière autonome et d'être corrigé automatiquement au fur et à mesure. [Essayez-le](https://steph-lebl.github.io/robot-dictee/)!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steph-lebl/robot-dictee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/steph-lebl/robot-dictee/issues"
+  },
+  "homepage": "https://github.com/steph-lebl/robot-dictee#readme",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^6.4.0"
+  }
+}

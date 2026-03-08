@@ -14,6 +14,7 @@
   <script type="text/javascript" src="model/word.js"></script>
 
   <script type="text/javascript" src="speechSynthesisTextToSpeechEngine.js"></script>
+  <script type="text/javascript" src="staticAudioTextToSpeechEngine.js"></script>
   <script type="text/javascript" src="predefinedDictations.js"></script>
   <script type="text/javascript" src="viewModel.js"></script>
   
@@ -51,9 +52,11 @@
     <form name="create-dictation-form" id="create-dictation-form" data-bind="submit: createDictation, if:currentPage()==='newDictation'">
       <h3>Dictées</h3>
 
-      <div data-bind="foreach: predefinedDictations">
-        <!-- ko if: $index() > 0 -->|<!-- /ko -->
-        <a href="" data-bind="text: title, click: $parent.usePredefinedDictation"></a>
+      <div data-bind="foreach: groupedDictations">
+        <h4 data-bind="text: theme"></h4>
+        <div class="dictation-group" data-bind="foreach: dictations">
+          <a class="dictation-link" href="" data-bind="text: title.replace(/^Thème \d+ - /, ''), click: $root.usePredefinedDictation"></a>
+        </div>
       </div>
 
       <h3>Dictée sur mesure</h3>

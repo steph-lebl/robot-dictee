@@ -1,186 +1,620 @@
 (function (global) {
   global.robotDictee.predefinedDictations = [
     {
-      "title": "Thème 1 - Semaine 1",
-      "text": "salade\nsec\nsèche\nsecouer\nsentier\nsentir\nservice\nsoie\nsoin\nson\nsoulier\nsouper\nsouriant\nsouriante\nspectacle\nsucre\nsucrerie\nsurface"
+        "title": "Thème 1 - Semaine 1",
+        "text": "salade\nsec\nsèche\nsecouer\nsentier\nsentir\nservice\nsoie\nsoin\nson\nsoulier\nsouper\nsouriant\nsouriante\nspectacle\nsucre\nsucrerie\nsurface",
+        "audioMap": {
+            "salade": "audio/theme-1-semaine-1/salade.mp3",
+            "sec": "audio/theme-1-semaine-1/sec.mp3",
+            "sèche": "audio/theme-1-semaine-1/seche.mp3",
+            "secouer": "audio/theme-1-semaine-1/secouer.mp3",
+            "sentier": "audio/theme-1-semaine-1/sentier.mp3",
+            "sentir": "audio/theme-1-semaine-1/sentir.mp3",
+            "service": "audio/theme-1-semaine-1/service.mp3",
+            "soie": "audio/theme-1-semaine-1/soie.mp3",
+            "soin": "audio/theme-1-semaine-1/soin.mp3",
+            "son": "audio/theme-1-semaine-1/son.mp3",
+            "soulier": "audio/theme-1-semaine-1/soulier.mp3",
+            "souper": "audio/theme-1-semaine-1/souper.mp3",
+            "souriant": "audio/theme-1-semaine-1/souriant.mp3",
+            "souriante": "audio/theme-1-semaine-1/souriante.mp3",
+            "spectacle": "audio/theme-1-semaine-1/spectacle.mp3",
+            "sucre": "audio/theme-1-semaine-1/sucre.mp3",
+            "sucrerie": "audio/theme-1-semaine-1/sucrerie.mp3",
+            "surface": "audio/theme-1-semaine-1/surface.mp3"
+        }
     },
     {
-      "title": "Thème 1 - Semaine 2",
-      "text": "aréna\ncaméra\ncinéma\ndéposer\nécouter\nespérer\nétoile\nfévrier\nmétéo\nmétier\nposséder\nprécipiter\npréparer\nprésenter\nprotéger\ntrésor"
+        "title": "Thème 1 - Semaine 2",
+        "text": "aréna\ncaméra\ncinéma\ndéposer\nécouter\nespérer\nétoile\nfévrier\nmétéo\nmétier\nposséder\nprécipiter\npréparer\nprésenter\nprotéger\ntrésor",
+        "audioMap": {
+            "aréna": "audio/theme-1-semaine-2/arena.mp3",
+            "caméra": "audio/theme-1-semaine-2/camera.mp3",
+            "cinéma": "audio/theme-1-semaine-2/cinema.mp3",
+            "déposer": "audio/theme-1-semaine-2/deposer.mp3",
+            "écouter": "audio/theme-1-semaine-2/ecouter.mp3",
+            "espérer": "audio/theme-1-semaine-2/esperer.mp3",
+            "étoile": "audio/theme-1-semaine-2/etoile.mp3",
+            "février": "audio/theme-1-semaine-2/fevrier.mp3",
+            "météo": "audio/theme-1-semaine-2/meteo.mp3",
+            "métier": "audio/theme-1-semaine-2/metier.mp3",
+            "posséder": "audio/theme-1-semaine-2/posseder.mp3",
+            "précipiter": "audio/theme-1-semaine-2/precipiter.mp3",
+            "préparer": "audio/theme-1-semaine-2/preparer.mp3",
+            "présenter": "audio/theme-1-semaine-2/presenter.mp3",
+            "protéger": "audio/theme-1-semaine-2/proteger.mp3",
+            "trésor": "audio/theme-1-semaine-2/tresor.mp3"
+        }
     },
     {
-      "title": "Thème 1 - Semaine 3",
-      "text": "cacher\ncamion\ncoin\ncommencer\nconsoler\ncontinuer\ncontre\ncostume\ncoucher\ncourant\ncours\ncourse\navancer\nglace\nlancer\nnaissance"
+        "title": "Thème 1 - Semaine 3",
+        "text": "cacher\ncamion\ncoin\ncommencer\nconsoler\ncontinuer\ncontre\ncostume\ncoucher\ncourant\ncours\ncourse\navancer\nglace\nlancer\nnaissance",
+        "audioMap": {
+            "cacher": "audio/theme-1-semaine-3/cacher.mp3",
+            "camion": "audio/theme-1-semaine-3/camion.mp3",
+            "coin": "audio/theme-1-semaine-3/coin.mp3",
+            "commencer": "audio/theme-1-semaine-3/commencer.mp3",
+            "consoler": "audio/theme-1-semaine-3/consoler.mp3",
+            "continuer": "audio/theme-1-semaine-3/continuer.mp3",
+            "contre": "audio/theme-1-semaine-3/contre.mp3",
+            "costume": "audio/theme-1-semaine-3/costume.mp3",
+            "coucher": "audio/theme-1-semaine-3/coucher.mp3",
+            "courant": "audio/theme-1-semaine-3/courant.mp3",
+            "cours": "audio/theme-1-semaine-3/cours.mp3",
+            "course": "audio/theme-1-semaine-3/course.mp3",
+            "avancer": "audio/theme-1-semaine-3/avancer.mp3",
+            "glace": "audio/theme-1-semaine-3/glace.mp3",
+            "lancer": "audio/theme-1-semaine-3/lancer.mp3",
+            "naissance": "audio/theme-1-semaine-3/naissance.mp3"
+        }
     },
     {
-      "title": "Thème 1 - Semaine 4",
-      "text": "abri\namour\navion\navril\nbâton\nbonsoir\ncar\ncri\ndemi\ndemie\ndur\ndure\nlion\nlionne\nmal\nmari\nmars\nmur\nor\nours\nourse\npoil\ntour\ntrou"
+        "title": "Thème 1 - Semaine 4",
+        "text": "abri\namour\navion\navril\nbâton\nbonsoir\ncar\ncri\ndemi\ndemie\ndur\ndure\nlion\nlionne\nmal\nmari\nmars\nmur\nor\nours\nourse\npoil\ntour\ntrou",
+        "audioMap": {
+            "abri": "audio/theme-1-semaine-4/abri.mp3",
+            "amour": "audio/theme-1-semaine-4/amour.mp3",
+            "avion": "audio/theme-1-semaine-4/avion.mp3",
+            "avril": "audio/theme-1-semaine-4/avril.mp3",
+            "bâton": "audio/theme-1-semaine-4/baton.mp3",
+            "bonsoir": "audio/theme-1-semaine-4/bonsoir.mp3",
+            "car": "audio/theme-1-semaine-4/car.mp3",
+            "cri": "audio/theme-1-semaine-4/cri.mp3",
+            "demi": "audio/theme-1-semaine-4/demi.mp3",
+            "demie": "audio/theme-1-semaine-4/demie.mp3",
+            "dur": "audio/theme-1-semaine-4/dur.mp3",
+            "dure": "audio/theme-1-semaine-4/dure.mp3",
+            "lion": "audio/theme-1-semaine-4/lion.mp3",
+            "lionne": "audio/theme-1-semaine-4/lionne.mp3",
+            "mal": "audio/theme-1-semaine-4/mal.mp3",
+            "mari": "audio/theme-1-semaine-4/mari.mp3",
+            "mars": "audio/theme-1-semaine-4/mars.mp3",
+            "mur": "audio/theme-1-semaine-4/mur.mp3",
+            "or": "audio/theme-1-semaine-4/or.mp3",
+            "ours": "audio/theme-1-semaine-4/ours.mp3",
+            "ourse": "audio/theme-1-semaine-4/ourse.mp3",
+            "poil": "audio/theme-1-semaine-4/poil.mp3",
+            "tour": "audio/theme-1-semaine-4/tour.mp3",
+            "trou": "audio/theme-1-semaine-4/trou.mp3"
+        }
     },
     {
-      "title": `Thème 2 - Semaine 1`,
-      "text": `bord\nbut\nchant\ndoigt\ndroit\ndroite\nfond\nhaut\nméchant\nméchante\nmort\nmorte\nnid\npot\nrat\nrate\nrenard\nrenarde\nretard\nrond\nronde\nsalut`
+        "title": "Thème 2 - Semaine 1",
+        "text": "bord\nbut\nchant\ndoigt\ndroit\ndroite\nfond\nhaut\nméchant\nméchante\nmort\nmorte\nnid\npot\nrat\nrate\nrenard\nrenarde\nretard\nrond\nronde\nsalut",
+        "audioMap": {
+            "bord": "audio/theme-2-semaine-1/bord.mp3",
+            "but": "audio/theme-2-semaine-1/but.mp3",
+            "chant": "audio/theme-2-semaine-1/chant.mp3",
+            "doigt": "audio/theme-2-semaine-1/doigt.mp3",
+            "droit": "audio/theme-2-semaine-1/droit.mp3",
+            "droite": "audio/theme-2-semaine-1/droite.mp3",
+            "fond": "audio/theme-2-semaine-1/fond.mp3",
+            "haut": "audio/theme-2-semaine-1/haut.mp3",
+            "méchant": "audio/theme-2-semaine-1/mechant.mp3",
+            "méchante": "audio/theme-2-semaine-1/mechante.mp3",
+            "mort": "audio/theme-2-semaine-1/mort.mp3",
+            "morte": "audio/theme-2-semaine-1/morte.mp3",
+            "nid": "audio/theme-2-semaine-1/nid.mp3",
+            "pot": "audio/theme-2-semaine-1/pot.mp3",
+            "rat": "audio/theme-2-semaine-1/rat.mp3",
+            "rate": "audio/theme-2-semaine-1/rate.mp3",
+            "renard": "audio/theme-2-semaine-1/renard.mp3",
+            "renarde": "audio/theme-2-semaine-1/renarde.mp3",
+            "retard": "audio/theme-2-semaine-1/retard.mp3",
+            "rond": "audio/theme-2-semaine-1/rond.mp3",
+            "ronde": "audio/theme-2-semaine-1/ronde.mp3",
+            "salut": "audio/theme-2-semaine-1/salut.mp3"
+        }
     },
     {
-      "title": `Thème 2 - Semaine 2`,
-      "text": `ajout\nalphabet\nargent\ncourt\ncourte\ndos\népais\népaisse\ngentil\ngentille\nimportant\nimportante\nmauvais\nmauvaise\nminuit\nouvert\nouverte\npart\npoint\nprécis\nprécise\nsabot\nsourcil`
+        "title": "Thème 2 - Semaine 2",
+        "text": "ajout\nalphabet\nargent\ncourt\ncourte\ndos\népais\népaisse\ngentil\ngentille\nimportant\nimportante\nmauvais\nmauvaise\nminuit\nouvert\nouverte\npart\npoint\nprécis\nprécise\nsabot\nsourcil",
+        "audioMap": {
+            "ajout": "audio/theme-2-semaine-2/ajout.mp3",
+            "alphabet": "audio/theme-2-semaine-2/alphabet.mp3",
+            "argent": "audio/theme-2-semaine-2/argent.mp3",
+            "court": "audio/theme-2-semaine-2/court.mp3",
+            "courte": "audio/theme-2-semaine-2/courte.mp3",
+            "dos": "audio/theme-2-semaine-2/dos.mp3",
+            "épais": "audio/theme-2-semaine-2/epais.mp3",
+            "épaisse": "audio/theme-2-semaine-2/epaisse.mp3",
+            "gentil": "audio/theme-2-semaine-2/gentil.mp3",
+            "gentille": "audio/theme-2-semaine-2/gentille.mp3",
+            "important": "audio/theme-2-semaine-2/important.mp3",
+            "importante": "audio/theme-2-semaine-2/importante.mp3",
+            "mauvais": "audio/theme-2-semaine-2/mauvais.mp3",
+            "mauvaise": "audio/theme-2-semaine-2/mauvaise.mp3",
+            "minuit": "audio/theme-2-semaine-2/minuit.mp3",
+            "ouvert": "audio/theme-2-semaine-2/ouvert.mp3",
+            "ouverte": "audio/theme-2-semaine-2/ouverte.mp3",
+            "part": "audio/theme-2-semaine-2/part.mp3",
+            "point": "audio/theme-2-semaine-2/point.mp3",
+            "précis": "audio/theme-2-semaine-2/precis.mp3",
+            "précise": "audio/theme-2-semaine-2/precise.mp3",
+            "sabot": "audio/theme-2-semaine-2/sabot.mp3",
+            "sourcil": "audio/theme-2-semaine-2/sourcil.mp3"
+        }
     },
     {
-      "title": `Thème 2 - Semaine 3`,
-      "text": `ampoule\nchamp\ncombien\ncomprendre\ncompter\ndécembre\nembrasser\nensemble\nexemple\njambe\nlongtemps\nnombre\nnovembre\nombre\nremplir\nsembler\nseptembre`
+        "title": "Thème 2 - Semaine 3",
+        "text": "ampoule\nchamp\ncombien\ncomprendre\ncompter\ndécembre\nembrasser\nensemble\nexemple\njambe\nlongtemps\nnombre\nnovembre\nombre\nremplir\nsembler\nseptembre",
+        "audioMap": {
+            "ampoule": "audio/theme-2-semaine-3/ampoule.mp3",
+            "champ": "audio/theme-2-semaine-3/champ.mp3",
+            "combien": "audio/theme-2-semaine-3/combien.mp3",
+            "comprendre": "audio/theme-2-semaine-3/comprendre.mp3",
+            "compter": "audio/theme-2-semaine-3/compter.mp3",
+            "décembre": "audio/theme-2-semaine-3/decembre.mp3",
+            "embrasser": "audio/theme-2-semaine-3/embrasser.mp3",
+            "ensemble": "audio/theme-2-semaine-3/ensemble.mp3",
+            "exemple": "audio/theme-2-semaine-3/exemple.mp3",
+            "jambe": "audio/theme-2-semaine-3/jambe.mp3",
+            "longtemps": "audio/theme-2-semaine-3/longtemps.mp3",
+            "nombre": "audio/theme-2-semaine-3/nombre.mp3",
+            "novembre": "audio/theme-2-semaine-3/novembre.mp3",
+            "ombre": "audio/theme-2-semaine-3/ombre.mp3",
+            "remplir": "audio/theme-2-semaine-3/remplir.mp3",
+            "sembler": "audio/theme-2-semaine-3/sembler.mp3",
+            "septembre": "audio/theme-2-semaine-3/septembre.mp3"
+        }
     },
     {
-      "title": `Thème 2 - Semaine 4`,
-      "text": `bande\nbarbe\ncuisine\ndanse\ndemande\ndemie\nlibre\nmaladie\nmine\nmurmure\npâle\npartie\nperdre\npile\npoudre\ntimide\nvivre\nvoiture\nvue`
+        "title": "Thème 2 - Semaine 4",
+        "text": "bande\nbarbe\ncuisine\ndanse\ndemande\ndemie\nlibre\nmaladie\nmine\nmurmure\npâle\npartie\nperdre\npile\npoudre\ntimide\nvivre\nvoiture\nvue",
+        "audioMap": {
+            "bande": "audio/theme-2-semaine-4/bande.mp3",
+            "barbe": "audio/theme-2-semaine-4/barbe.mp3",
+            "cuisine": "audio/theme-2-semaine-4/cuisine.mp3",
+            "danse": "audio/theme-2-semaine-4/danse.mp3",
+            "demande": "audio/theme-2-semaine-4/demande.mp3",
+            "demie": "audio/theme-2-semaine-4/demie.mp3",
+            "libre": "audio/theme-2-semaine-4/libre.mp3",
+            "maladie": "audio/theme-2-semaine-4/maladie.mp3",
+            "mine": "audio/theme-2-semaine-4/mine.mp3",
+            "murmure": "audio/theme-2-semaine-4/murmure.mp3",
+            "pâle": "audio/theme-2-semaine-4/pale.mp3",
+            "partie": "audio/theme-2-semaine-4/partie.mp3",
+            "perdre": "audio/theme-2-semaine-4/perdre.mp3",
+            "pile": "audio/theme-2-semaine-4/pile.mp3",
+            "poudre": "audio/theme-2-semaine-4/poudre.mp3",
+            "timide": "audio/theme-2-semaine-4/timide.mp3",
+            "vivre": "audio/theme-2-semaine-4/vivre.mp3",
+            "voiture": "audio/theme-2-semaine-4/voiture.mp3",
+            "vue": "audio/theme-2-semaine-4/vue.mp3"
+        }
     },
     {
-      "title": `Thème 2 - Semaine 5`,
-      "text": `âge\nchanger\ndanger\ngenou\ngenre\njeter\njeune\nménage\nnuage\npassage\nvillage\nbonjour\njanvier\njoue\njus\nrejoindre`
+        "title": "Thème 2 - Semaine 5",
+        "text": "âge\nchanger\ndanger\ngenou\ngenre\njeter\njeune\nménage\nnuage\npassage\nvillage\nbonjour\njanvier\njoue\njus\nrejoindre",
+        "audioMap": {
+            "âge": "audio/theme-2-semaine-5/age.mp3",
+            "changer": "audio/theme-2-semaine-5/changer.mp3",
+            "danger": "audio/theme-2-semaine-5/danger.mp3",
+            "genou": "audio/theme-2-semaine-5/genou.mp3",
+            "genre": "audio/theme-2-semaine-5/genre.mp3",
+            "jeter": "audio/theme-2-semaine-5/jeter.mp3",
+            "jeune": "audio/theme-2-semaine-5/jeune.mp3",
+            "ménage": "audio/theme-2-semaine-5/menage.mp3",
+            "nuage": "audio/theme-2-semaine-5/nuage.mp3",
+            "passage": "audio/theme-2-semaine-5/passage.mp3",
+            "village": "audio/theme-2-semaine-5/village.mp3",
+            "bonjour": "audio/theme-2-semaine-5/bonjour.mp3",
+            "janvier": "audio/theme-2-semaine-5/janvier.mp3",
+            "joue": "audio/theme-2-semaine-5/joue.mp3",
+            "jus": "audio/theme-2-semaine-5/jus.mp3",
+            "rejoindre": "audio/theme-2-semaine-5/rejoindre.mp3"
+        }
     },
     {
-      "title": "Thème 3 - Semaine 1",
-      "text": "chaise\nchoisir\ncrise\néglise\nfraise\nposer\ntélévision\nusine\nchasse\nchasser\nchasseur\nchasseuse\nglisser\npossible\npousser\npoussin\nprofesseur\nprofesseure\nréussir\nvitesse"
+        "title": "Thème 3 - Semaine 1",
+        "text": "chaise\nchoisir\ncrise\néglise\nfraise\nposer\ntélévision\nusine\nchasse\nchasser\nchasseur\nchasseuse\nglisser\npossible\npousser\npoussin\nprofesseur\nprofesseure\nréussir\nvitesse",
+        "audioMap": {
+            "chaise": "audio/theme-3-semaine-1/chaise.mp3",
+            "choisir": "audio/theme-3-semaine-1/choisir.mp3",
+            "crise": "audio/theme-3-semaine-1/crise.mp3",
+            "église": "audio/theme-3-semaine-1/eglise.mp3",
+            "fraise": "audio/theme-3-semaine-1/fraise.mp3",
+            "poser": "audio/theme-3-semaine-1/poser.mp3",
+            "télévision": "audio/theme-3-semaine-1/television.mp3",
+            "usine": "audio/theme-3-semaine-1/usine.mp3",
+            "chasse": "audio/theme-3-semaine-1/chasse.mp3",
+            "chasser": "audio/theme-3-semaine-1/chasser.mp3",
+            "chasseur": "audio/theme-3-semaine-1/chasseur.mp3",
+            "chasseuse": "audio/theme-3-semaine-1/chasseuse.mp3",
+            "glisser": "audio/theme-3-semaine-1/glisser.mp3",
+            "possible": "audio/theme-3-semaine-1/possible.mp3",
+            "pousser": "audio/theme-3-semaine-1/pousser.mp3",
+            "poussin": "audio/theme-3-semaine-1/poussin.mp3",
+            "professeur": "audio/theme-3-semaine-1/professeur.mp3",
+            "professeure": "audio/theme-3-semaine-1/professeure.mp3",
+            "réussir": "audio/theme-3-semaine-1/reussir.mp3",
+            "vitesse": "audio/theme-3-semaine-1/vitesse.mp3"
+        }
     },
     {
-      "title": "Thème 3 - Semaine 2",
-      "text": "baigner\ngagner\nligne\nsoigner\ndiagonal\ndiagonale\ngarder\ngauche\nglacier\ngorge\ngoutte\ngroupe\nmagasin\ndéguiser\nguerre\nguidon\nlangue"
+        "title": "Thème 3 - Semaine 2",
+        "text": "baigner\ngagner\nligne\nsoigner\ndiagonal\ndiagonale\ngarder\ngauche\nglacier\ngorge\ngoutte\ngroupe\nmagasin\ndéguiser\nguerre\nguidon\nlangue",
+        "audioMap": {
+            "baigner": "audio/theme-3-semaine-2/baigner.mp3",
+            "gagner": "audio/theme-3-semaine-2/gagner.mp3",
+            "ligne": "audio/theme-3-semaine-2/ligne.mp3",
+            "soigner": "audio/theme-3-semaine-2/soigner.mp3",
+            "diagonal": "audio/theme-3-semaine-2/diagonal.mp3",
+            "diagonale": "audio/theme-3-semaine-2/diagonale.mp3",
+            "garder": "audio/theme-3-semaine-2/garder.mp3",
+            "gauche": "audio/theme-3-semaine-2/gauche.mp3",
+            "glacier": "audio/theme-3-semaine-2/glacier.mp3",
+            "gorge": "audio/theme-3-semaine-2/gorge.mp3",
+            "goutte": "audio/theme-3-semaine-2/goutte.mp3",
+            "groupe": "audio/theme-3-semaine-2/groupe.mp3",
+            "magasin": "audio/theme-3-semaine-2/magasin.mp3",
+            "déguiser": "audio/theme-3-semaine-2/deguiser.mp3",
+            "guerre": "audio/theme-3-semaine-2/guerre.mp3",
+            "guidon": "audio/theme-3-semaine-2/guidon.mp3",
+            "langue": "audio/theme-3-semaine-2/langue.mp3"
+        }
     },
     {
-      "title": "Thème 3 - Semaine 3",
-      "text": "aider\navaler\ncrier\ndiriger\nmener\nmontrer\noublier\nporter\nraconter\nremonter\nretourner\nretrouver\nrouler\nterminer\ntirer\ntraverser\ntuer\nverser"
+        "title": "Thème 3 - Semaine 3",
+        "text": "aider\navaler\ncrier\ndiriger\nmener\nmontrer\noublier\nporter\nraconter\nremonter\nretourner\nretrouver\nrouler\nterminer\ntirer\ntraverser\ntuer\nverser",
+        "audioMap": {
+            "aider": "audio/theme-3-semaine-3/aider.mp3",
+            "avaler": "audio/theme-3-semaine-3/avaler.mp3",
+            "crier": "audio/theme-3-semaine-3/crier.mp3",
+            "diriger": "audio/theme-3-semaine-3/diriger.mp3",
+            "mener": "audio/theme-3-semaine-3/mener.mp3",
+            "montrer": "audio/theme-3-semaine-3/montrer.mp3",
+            "oublier": "audio/theme-3-semaine-3/oublier.mp3",
+            "porter": "audio/theme-3-semaine-3/porter.mp3",
+            "raconter": "audio/theme-3-semaine-3/raconter.mp3",
+            "remonter": "audio/theme-3-semaine-3/remonter.mp3",
+            "retourner": "audio/theme-3-semaine-3/retourner.mp3",
+            "retrouver": "audio/theme-3-semaine-3/retrouver.mp3",
+            "rouler": "audio/theme-3-semaine-3/rouler.mp3",
+            "terminer": "audio/theme-3-semaine-3/terminer.mp3",
+            "tirer": "audio/theme-3-semaine-3/tirer.mp3",
+            "traverser": "audio/theme-3-semaine-3/traverser.mp3",
+            "tuer": "audio/theme-3-semaine-3/tuer.mp3",
+            "verser": "audio/theme-3-semaine-3/verser.mp3"
+        }
     },
     {
-      "title": "Thème 3 - Semaine 4",
-      "text": "année\naraignée\nbouchée\npurée\nrandonnée\nrangée\nsoirée\ntraversée\nveillée\nclé\nmoitié\nsanté\nassez\ncongé\nmai\nmarché"
+        "title": "Thème 3 - Semaine 4",
+        "text": "année\naraignée\nbouchée\npurée\nrandonnée\nrangée\nsoirée\ntraversée\nveillée\nclé\nmoitié\nsanté\nassez\ncongé\nmai\nmarché",
+        "audioMap": {
+            "année": "audio/theme-3-semaine-4/annee.mp3",
+            "araignée": "audio/theme-3-semaine-4/araignee.mp3",
+            "bouchée": "audio/theme-3-semaine-4/bouchee.mp3",
+            "purée": "audio/theme-3-semaine-4/puree.mp3",
+            "randonnée": "audio/theme-3-semaine-4/randonnee.mp3",
+            "rangée": "audio/theme-3-semaine-4/rangee.mp3",
+            "soirée": "audio/theme-3-semaine-4/soiree.mp3",
+            "traversée": "audio/theme-3-semaine-4/traversee.mp3",
+            "veillée": "audio/theme-3-semaine-4/veillee.mp3",
+            "clé": "audio/theme-3-semaine-4/cle.mp3",
+            "moitié": "audio/theme-3-semaine-4/moitie.mp3",
+            "santé": "audio/theme-3-semaine-4/sante.mp3",
+            "assez": "audio/theme-3-semaine-4/assez.mp3",
+            "congé": "audio/theme-3-semaine-4/conge.mp3",
+            "mai": "audio/theme-3-semaine-4/mai.mp3",
+            "marché": "audio/theme-3-semaine-4/marche.mp3"
+        }
     },
     {
-      "title": "Thème 4 - Semaine 1",
-      "text": "craquelin\ndès\nplastique\npresque\nquel\nquelle\nquels\nquelles\nquelqu'un\nquelqu'une\nquelques-uns\nquelques-unes\nremarquer\nsans\ntaquiner\ntranquille\ntranquillité\nparc\nbien\nbientôt\nrien\nterrien\nterrienne\nvégétarien\nvégétarienne"
+        "title": "Thème 4 - Semaine 1",
+        "text": "craquelin\ndès\nplastique\npresque\nquel\nquelle\nquels\nquelles\nquelqu'un\nquelqu'une\nquelques-uns\nquelques-unes\nremarquer\nsans\ntaquiner\ntranquille\ntranquillité\nparc\nbien\nbientôt\nrien\nterrien\nterrienne\nvégétarien\nvégétarienne",
+        "audioMap": {
+            "craquelin": "audio/theme-4-semaine-1/craquelin.mp3",
+            "dès": "audio/theme-4-semaine-1/des.mp3",
+            "plastique": "audio/theme-4-semaine-1/plastique.mp3",
+            "presque": "audio/theme-4-semaine-1/presque.mp3",
+            "quel": "audio/theme-4-semaine-1/quel.mp3",
+            "quelle": "audio/theme-4-semaine-1/quelle.mp3",
+            "quels": "audio/theme-4-semaine-1/quels.mp3",
+            "quelles": "audio/theme-4-semaine-1/quelles.mp3",
+            "quelqu'un": "audio/theme-4-semaine-1/quelqu-un.mp3",
+            "quelqu'une": "audio/theme-4-semaine-1/quelqu-une.mp3",
+            "quelques-uns": "audio/theme-4-semaine-1/quelques-uns.mp3",
+            "quelques-unes": "audio/theme-4-semaine-1/quelques-unes.mp3",
+            "remarquer": "audio/theme-4-semaine-1/remarquer.mp3",
+            "sans": "audio/theme-4-semaine-1/sans.mp3",
+            "taquiner": "audio/theme-4-semaine-1/taquiner.mp3",
+            "tranquille": "audio/theme-4-semaine-1/tranquille.mp3",
+            "tranquillité": "audio/theme-4-semaine-1/tranquillite.mp3",
+            "parc": "audio/theme-4-semaine-1/parc.mp3",
+            "bien": "audio/theme-4-semaine-1/bien.mp3",
+            "bientôt": "audio/theme-4-semaine-1/bientot.mp3",
+            "rien": "audio/theme-4-semaine-1/rien.mp3",
+            "terrien": "audio/theme-4-semaine-1/terrien.mp3",
+            "terrienne": "audio/theme-4-semaine-1/terrienne.mp3",
+            "végétarien": "audio/theme-4-semaine-1/vegetarien.mp3",
+            "végétarienne": "audio/theme-4-semaine-1/vegetarienne.mp3"
+        }
     },
     {
-      "title": "Thème 4 - Semaine 2",
-      "text": "bonheur\nbricoleur\nbricoleuse\nchanteur\nchanteuse\ncouleur\ndocteur\ndocteure\nmalheur\nmeilleur\nmeilleure\namoureux\namoureuse\nchaleureux\nchaleureuse\ndouloureux\ndouloureuse\nlieu\nmilieu\nbrutal\nbrutale\nhôpital\njournal\nmétal\nmétaux"
+        "title": "Thème 4 - Semaine 2",
+        "text": "bonheur\nbricoleur\nbricoleuse\nchanteur\nchanteuse\ncouleur\ndocteur\ndocteure\nmalheur\nmeilleur\nmeilleure\namoureux\namoureuse\nchaleureux\nchaleureuse\ndouloureux\ndouloureuse\nlieu\nmilieu\nbrutal\nbrutale\nhôpital\njournal\nmétal\nmétaux",
+        "audioMap": {
+            "bonheur": "audio/theme-4-semaine-2/bonheur.mp3",
+            "bricoleur": "audio/theme-4-semaine-2/bricoleur.mp3",
+            "bricoleuse": "audio/theme-4-semaine-2/bricoleuse.mp3",
+            "chanteur": "audio/theme-4-semaine-2/chanteur.mp3",
+            "chanteuse": "audio/theme-4-semaine-2/chanteuse.mp3",
+            "couleur": "audio/theme-4-semaine-2/couleur.mp3",
+            "docteur": "audio/theme-4-semaine-2/docteur.mp3",
+            "docteure": "audio/theme-4-semaine-2/docteure.mp3",
+            "malheur": "audio/theme-4-semaine-2/malheur.mp3",
+            "meilleur": "audio/theme-4-semaine-2/meilleur.mp3",
+            "meilleure": "audio/theme-4-semaine-2/meilleure.mp3",
+            "amoureux": "audio/theme-4-semaine-2/amoureux.mp3",
+            "amoureuse": "audio/theme-4-semaine-2/amoureuse.mp3",
+            "chaleureux": "audio/theme-4-semaine-2/chaleureux.mp3",
+            "chaleureuse": "audio/theme-4-semaine-2/chaleureuse.mp3",
+            "douloureux": "audio/theme-4-semaine-2/douloureux.mp3",
+            "douloureuse": "audio/theme-4-semaine-2/douloureuse.mp3",
+            "lieu": "audio/theme-4-semaine-2/lieu.mp3",
+            "milieu": "audio/theme-4-semaine-2/milieu.mp3",
+            "brutal": "audio/theme-4-semaine-2/brutal.mp3",
+            "brutale": "audio/theme-4-semaine-2/brutale.mp3",
+            "hôpital": "audio/theme-4-semaine-2/hopital.mp3",
+            "journal": "audio/theme-4-semaine-2/journal.mp3",
+            "métal": "audio/theme-4-semaine-2/metal.mp3",
+            "métaux": "audio/theme-4-semaine-2/metaux.mp3"
+        }
     },
     {
-      "title": "Thème 4 - Semaine 3",
-      "text": "bonhomme\nhabiter\nhauteur\nherbe\nhorrible\nacheter\nbouchon\nbranche\nchacun\nchacune\nmachine\nmarcher\npenche\npoche\nrecherche\nriche\ntoucher"
+        "title": "Thème 4 - Semaine 3",
+        "text": "bonhomme\nhabiter\nhauteur\nherbe\nhorrible\nacheter\nbouchon\nbranche\nchacun\nchacune\nmachine\nmarcher\npenche\npoche\nrecherche\nriche\ntoucher",
+        "audioMap": {
+            "bonhomme": "audio/theme-4-semaine-3/bonhomme.mp3",
+            "habiter": "audio/theme-4-semaine-3/habiter.mp3",
+            "hauteur": "audio/theme-4-semaine-3/hauteur.mp3",
+            "herbe": "audio/theme-4-semaine-3/herbe.mp3",
+            "horrible": "audio/theme-4-semaine-3/horrible.mp3",
+            "acheter": "audio/theme-4-semaine-3/acheter.mp3",
+            "bouchon": "audio/theme-4-semaine-3/bouchon.mp3",
+            "branche": "audio/theme-4-semaine-3/branche.mp3",
+            "chacun": "audio/theme-4-semaine-3/chacun.mp3",
+            "chacune": "audio/theme-4-semaine-3/chacune.mp3",
+            "machine": "audio/theme-4-semaine-3/machine.mp3",
+            "marcher": "audio/theme-4-semaine-3/marcher.mp3",
+            "penche": "audio/theme-4-semaine-3/penche.mp3",
+            "poche": "audio/theme-4-semaine-3/poche.mp3",
+            "recherche": "audio/theme-4-semaine-3/recherche.mp3",
+            "riche": "audio/theme-4-semaine-3/riche.mp3",
+            "toucher": "audio/theme-4-semaine-3/toucher.mp3"
+        }
     },
     {
-      "title": "Thème 4 - Semaine 4",
-      "text": "adjectif\nfacile\nfarine\nferme\nfermer\nfil\nfilm\nfixe\nfleuve\nfou\nfolle\nneuf\nneuve\npréférer\ndauphin\nphoto\ntéléphone\ntéléphoner"
+        "title": "Thème 4 - Semaine 4",
+        "text": "adjectif\nfacile\nfarine\nferme\nfermer\nfil\nfilm\nfixe\nfleuve\nfou\nfolle\nneuf\nneuve\npréférer\ndauphin\nphoto\ntéléphone\ntéléphoner",
+        "audioMap": {
+            "adjectif": "audio/theme-4-semaine-4/adjectif.mp3",
+            "facile": "audio/theme-4-semaine-4/facile.mp3",
+            "farine": "audio/theme-4-semaine-4/farine.mp3",
+            "ferme": "audio/theme-4-semaine-4/ferme.mp3",
+            "fermer": "audio/theme-4-semaine-4/fermer.mp3",
+            "fil": "audio/theme-4-semaine-4/fil.mp3",
+            "film": "audio/theme-4-semaine-4/film.mp3",
+            "fixe": "audio/theme-4-semaine-4/fixe.mp3",
+            "fleuve": "audio/theme-4-semaine-4/fleuve.mp3",
+            "fou": "audio/theme-4-semaine-4/fou.mp3",
+            "folle": "audio/theme-4-semaine-4/folle.mp3",
+            "neuf": "audio/theme-4-semaine-4/neuf.mp3",
+            "neuve": "audio/theme-4-semaine-4/neuve.mp3",
+            "préférer": "audio/theme-4-semaine-4/preferer.mp3",
+            "dauphin": "audio/theme-4-semaine-4/dauphin.mp3",
+            "photo": "audio/theme-4-semaine-4/photo.mp3",
+            "téléphone": "audio/theme-4-semaine-4/telephone.mp3",
+            "téléphoner": "audio/theme-4-semaine-4/telephoner.mp3"
+        }
     },
     {
-      "title": "Thème 5 - Semaine 5",
-      "text": "aussitôt\nautobus\ncause\nfaute\noctobre\npromener\nrestaurant\nsauver\nagneau\nbateau\nbureau\ncadeau\nchâteau\nmorceau\nmuseau\nruisseau\nradio"
+        "title": "Thème 5 - Semaine 5",
+        "text": "aussitôt\nautobus\ncause\nfaute\noctobre\npromener\nrestaurant\nsauver\nagneau\nbateau\nbureau\ncadeau\nchâteau\nmorceau\nmuseau\nruisseau\nradio",
+        "audioMap": {
+            "aussitôt": "audio/theme-5-semaine-5/aussitot.mp3",
+            "autobus": "audio/theme-5-semaine-5/autobus.mp3",
+            "cause": "audio/theme-5-semaine-5/cause.mp3",
+            "faute": "audio/theme-5-semaine-5/faute.mp3",
+            "octobre": "audio/theme-5-semaine-5/octobre.mp3",
+            "promener": "audio/theme-5-semaine-5/promener.mp3",
+            "restaurant": "audio/theme-5-semaine-5/restaurant.mp3",
+            "sauver": "audio/theme-5-semaine-5/sauver.mp3",
+            "agneau": "audio/theme-5-semaine-5/agneau.mp3",
+            "bateau": "audio/theme-5-semaine-5/bateau.mp3",
+            "bureau": "audio/theme-5-semaine-5/bureau.mp3",
+            "cadeau": "audio/theme-5-semaine-5/cadeau.mp3",
+            "château": "audio/theme-5-semaine-5/chateau.mp3",
+            "morceau": "audio/theme-5-semaine-5/morceau.mp3",
+            "museau": "audio/theme-5-semaine-5/museau.mp3",
+            "ruisseau": "audio/theme-5-semaine-5/ruisseau.mp3",
+            "radio": "audio/theme-5-semaine-5/radio.mp3"
+        }
     },
     {
-      "title": "Thème 5 - Semaine 1",
-      "text": "après-midi\nclair\nclaire\ncrème\nfrais\nfraîche\nlaisser\nlèvre\nlièvre\nlumière\nmètre\nparaître\npièce\nrivière\nsaison\nsouhaiter\ntroisième\nvinaigre"
+        "title": "Thème 5 - Semaine 1",
+        "text": "après-midi\nclair\nclaire\ncrème\nfrais\nfraîche\nlaisser\nlèvre\nlièvre\nlumière\nmètre\nparaître\npièce\nrivière\nsaison\nsouhaiter\ntroisième\nvinaigre",
+        "audioMap": {
+            "après-midi": "audio/theme-5-semaine-1/apres-midi.mp3",
+            "clair": "audio/theme-5-semaine-1/clair.mp3",
+            "claire": "audio/theme-5-semaine-1/claire.mp3",
+            "crème": "audio/theme-5-semaine-1/creme.mp3",
+            "frais": "audio/theme-5-semaine-1/frais.mp3",
+            "fraîche": "audio/theme-5-semaine-1/fraiche.mp3",
+            "laisser": "audio/theme-5-semaine-1/laisser.mp3",
+            "lèvre": "audio/theme-5-semaine-1/levre.mp3",
+            "lièvre": "audio/theme-5-semaine-1/lievre.mp3",
+            "lumière": "audio/theme-5-semaine-1/lumiere.mp3",
+            "mètre": "audio/theme-5-semaine-1/metre.mp3",
+            "paraître": "audio/theme-5-semaine-1/paraitre.mp3",
+            "pièce": "audio/theme-5-semaine-1/piece.mp3",
+            "rivière": "audio/theme-5-semaine-1/riviere.mp3",
+            "saison": "audio/theme-5-semaine-1/saison.mp3",
+            "souhaiter": "audio/theme-5-semaine-1/souhaiter.mp3",
+            "troisième": "audio/theme-5-semaine-1/troisieme.mp3",
+            "vinaigre": "audio/theme-5-semaine-1/vinaigre.mp3"
+        }
     },
     {
-      "title": "Thème 5 - Semaine 2",
-      "text": "bête\enquête\nrêver\nvêtement\nbracelet\ncornet\njouet\njuillet\nsujet\nfer\nfier\nfière\nmer\naoût\nd'abord\nfaim\njuin\nzoo"
+        "title": "Thème 5 - Semaine 2",
+        "text": "bête\nenquête\nrêver\nvêtement\nbracelet\ncornet\njouet\njuillet\nsujet\nfer\nfier\nfière\nmer\naoût\nd'abord\nfaim\njuin\nzoo",
+        "audioMap": {
+            "bête": "audio/theme-5-semaine-2/bete.mp3",
+            "enquête": "audio/theme-5-semaine-2/enquete.mp3",
+            "rêver": "audio/theme-5-semaine-2/rever.mp3",
+            "vêtement": "audio/theme-5-semaine-2/vetement.mp3",
+            "bracelet": "audio/theme-5-semaine-2/bracelet.mp3",
+            "cornet": "audio/theme-5-semaine-2/cornet.mp3",
+            "jouet": "audio/theme-5-semaine-2/jouet.mp3",
+            "juillet": "audio/theme-5-semaine-2/juillet.mp3",
+            "sujet": "audio/theme-5-semaine-2/sujet.mp3",
+            "fer": "audio/theme-5-semaine-2/fer.mp3",
+            "fier": "audio/theme-5-semaine-2/fier.mp3",
+            "fière": "audio/theme-5-semaine-2/fiere.mp3",
+            "mer": "audio/theme-5-semaine-2/mer.mp3",
+            "août": "audio/theme-5-semaine-2/aout.mp3",
+            "d'abord": "audio/theme-5-semaine-2/d-abord.mp3",
+            "faim": "audio/theme-5-semaine-2/faim.mp3",
+            "juin": "audio/theme-5-semaine-2/juin.mp3",
+            "zoo": "audio/theme-5-semaine-2/zoo.mp3"
+        }
     },
     {
-      "title": "Thème 5 - Semaine 3",
-      "text": "affaire\napporter\napprocher\nattraper\nbattre\nbotte\nchiffre\nfrapper\nnourriture\noccuper\npermettre\npierre\npromettre\nrappeler\nremettre\ntrottoir\nverre"
+        "title": "Thème 5 - Semaine 3",
+        "text": "affaire\napporter\napprocher\nattraper\nbattre\nbotte\nchiffre\nfrapper\nnourriture\noccuper\npermettre\npierre\npromettre\nrappeler\nremettre\ntrottoir\nverre",
+        "audioMap": {
+            "affaire": "audio/theme-5-semaine-3/affaire.mp3",
+            "apporter": "audio/theme-5-semaine-3/apporter.mp3",
+            "approcher": "audio/theme-5-semaine-3/approcher.mp3",
+            "attraper": "audio/theme-5-semaine-3/attraper.mp3",
+            "battre": "audio/theme-5-semaine-3/battre.mp3",
+            "botte": "audio/theme-5-semaine-3/botte.mp3",
+            "chiffre": "audio/theme-5-semaine-3/chiffre.mp3",
+            "frapper": "audio/theme-5-semaine-3/frapper.mp3",
+            "nourriture": "audio/theme-5-semaine-3/nourriture.mp3",
+            "occuper": "audio/theme-5-semaine-3/occuper.mp3",
+            "permettre": "audio/theme-5-semaine-3/permettre.mp3",
+            "pierre": "audio/theme-5-semaine-3/pierre.mp3",
+            "promettre": "audio/theme-5-semaine-3/promettre.mp3",
+            "rappeler": "audio/theme-5-semaine-3/rappeler.mp3",
+            "remettre": "audio/theme-5-semaine-3/remettre.mp3",
+            "trottoir": "audio/theme-5-semaine-3/trottoir.mp3",
+            "verre": "audio/theme-5-semaine-3/verre.mp3"
+        }
     },
     {
-      "title": "Thème 5 - Semaine 4",
-      "text": "bouteille\nbrouillon\ncheville\nréveiller\ntaille\ntravailler\nmoyen\npayer\nrayon\nvoyage\nallure\nballe\nballon\nmille\nmillier\nmillion\nsalle"
+        "title": "Thème 5 - Semaine 4",
+        "text": "bouteille\nbrouillon\ncheville\nréveiller\ntaille\ntravailler\nmoyen\npayer\nrayon\nvoyage\nallure\nballe\nballon\nmille\nmillier\nmillion\nsalle",
+        "audioMap": {
+            "bouteille": "audio/theme-5-semaine-4/bouteille.mp3",
+            "brouillon": "audio/theme-5-semaine-4/brouillon.mp3",
+            "cheville": "audio/theme-5-semaine-4/cheville.mp3",
+            "réveiller": "audio/theme-5-semaine-4/reveiller.mp3",
+            "taille": "audio/theme-5-semaine-4/taille.mp3",
+            "travailler": "audio/theme-5-semaine-4/travailler.mp3",
+            "moyen": "audio/theme-5-semaine-4/moyen.mp3",
+            "payer": "audio/theme-5-semaine-4/payer.mp3",
+            "rayon": "audio/theme-5-semaine-4/rayon.mp3",
+            "voyage": "audio/theme-5-semaine-4/voyage.mp3",
+            "allure": "audio/theme-5-semaine-4/allure.mp3",
+            "balle": "audio/theme-5-semaine-4/balle.mp3",
+            "ballon": "audio/theme-5-semaine-4/ballon.mp3",
+            "mille": "audio/theme-5-semaine-4/mille.mp3",
+            "millier": "audio/theme-5-semaine-4/millier.mp3",
+            "million": "audio/theme-5-semaine-4/million.mp3",
+            "salle": "audio/theme-5-semaine-4/salle.mp3"
+        }
     },
     {
-      "title": "Thème 6 - Semaine 1",
-      "text": "bain\ncertain\ncertaine\nchagrin\ndemain\nlendemain\npatin\npin\nprochain\nprochaine\nsapin\nterrain\nvoisin\nvoisine\nappartement\nlentement\nattention\ninvitation\nquestion\nréaction"
+        "title": "Thème 6 - Semaine 1",
+        "text": "bain\ncertain\ncertaine\nchagrin\ndemain\nlendemain\npatin\npin\nprochain\nprochaine\nsapin\nterrain\nvoisin\nvoisine\nappartement\nlentement\nattention\ninvitation\nquestion\nréaction",
+        "audioMap": {
+            "bain": "audio/theme-6-semaine-1/bain.mp3",
+            "certain": "audio/theme-6-semaine-1/certain.mp3",
+            "certaine": "audio/theme-6-semaine-1/certaine.mp3",
+            "chagrin": "audio/theme-6-semaine-1/chagrin.mp3",
+            "demain": "audio/theme-6-semaine-1/demain.mp3",
+            "lendemain": "audio/theme-6-semaine-1/lendemain.mp3",
+            "patin": "audio/theme-6-semaine-1/patin.mp3",
+            "pin": "audio/theme-6-semaine-1/pin.mp3",
+            "prochain": "audio/theme-6-semaine-1/prochain.mp3",
+            "prochaine": "audio/theme-6-semaine-1/prochaine.mp3",
+            "sapin": "audio/theme-6-semaine-1/sapin.mp3",
+            "terrain": "audio/theme-6-semaine-1/terrain.mp3",
+            "voisin": "audio/theme-6-semaine-1/voisin.mp3",
+            "voisine": "audio/theme-6-semaine-1/voisine.mp3",
+            "appartement": "audio/theme-6-semaine-1/appartement.mp3",
+            "lentement": "audio/theme-6-semaine-1/lentement.mp3",
+            "attention": "audio/theme-6-semaine-1/attention.mp3",
+            "invitation": "audio/theme-6-semaine-1/invitation.mp3",
+            "question": "audio/theme-6-semaine-1/question.mp3",
+            "réaction": "audio/theme-6-semaine-1/reaction.mp3"
+        }
     },
     {
-      "title": "Thème 6 - Semaine 2",
-      "text": "amande\napprendre\navant-midi\ndanser\ndescendre\ndétendre\nentrer\nenviron\nmanquer\npantalon\nplan\nrencontrer\nrendre\nreprendre\ntendre\nventre\nviande"
+        "title": "Thème 6 - Semaine 2",
+        "text": "amande\napprendre\navant-midi\ndanser\ndescendre\ndétendre\nentrer\nenviron\nmanquer\npantalon\nplan\nrencontrer\nrendre\nreprendre\ntendre\nventre\nviande",
+        "audioMap": {
+            "amande": "audio/theme-6-semaine-2/amande.mp3",
+            "apprendre": "audio/theme-6-semaine-2/apprendre.mp3",
+            "avant-midi": "audio/theme-6-semaine-2/avant-midi.mp3",
+            "danser": "audio/theme-6-semaine-2/danser.mp3",
+            "descendre": "audio/theme-6-semaine-2/descendre.mp3",
+            "détendre": "audio/theme-6-semaine-2/detendre.mp3",
+            "entrer": "audio/theme-6-semaine-2/entrer.mp3",
+            "environ": "audio/theme-6-semaine-2/environ.mp3",
+            "manquer": "audio/theme-6-semaine-2/manquer.mp3",
+            "pantalon": "audio/theme-6-semaine-2/pantalon.mp3",
+            "plan": "audio/theme-6-semaine-2/plan.mp3",
+            "rencontrer": "audio/theme-6-semaine-2/rencontrer.mp3",
+            "rendre": "audio/theme-6-semaine-2/rendre.mp3",
+            "reprendre": "audio/theme-6-semaine-2/reprendre.mp3",
+            "tendre": "audio/theme-6-semaine-2/tendre.mp3",
+            "ventre": "audio/theme-6-semaine-2/ventre.mp3",
+            "viande": "audio/theme-6-semaine-2/viande.mp3"
+        }
     },
     {
-      "title": "Thème 6 - Semaine 3",
-      "text": "acrobate\nadulte\nboîte\ncompote\nconte\ndate\ndroite\njuste\nminute\npépite\npirate\nsorte\nsuite\ntriste\nvisite"
+        "title": "Thème 6 - Semaine 3",
+        "text": "acrobate\nadulte\nboîte\ncompote\nconte\ndate\ndroite\njuste\nminute\npépite\npirate\nsorte\nsuite\ntriste\nvisite",
+        "audioMap": {
+            "acrobate": "audio/theme-6-semaine-3/acrobate.mp3",
+            "adulte": "audio/theme-6-semaine-3/adulte.mp3",
+            "boîte": "audio/theme-6-semaine-3/boite.mp3",
+            "compote": "audio/theme-6-semaine-3/compote.mp3",
+            "conte": "audio/theme-6-semaine-3/conte.mp3",
+            "date": "audio/theme-6-semaine-3/date.mp3",
+            "droite": "audio/theme-6-semaine-3/droite.mp3",
+            "juste": "audio/theme-6-semaine-3/juste.mp3",
+            "minute": "audio/theme-6-semaine-3/minute.mp3",
+            "pépite": "audio/theme-6-semaine-3/pepite.mp3",
+            "pirate": "audio/theme-6-semaine-3/pirate.mp3",
+            "sorte": "audio/theme-6-semaine-3/sorte.mp3",
+            "suite": "audio/theme-6-semaine-3/suite.mp3",
+            "triste": "audio/theme-6-semaine-3/triste.mp3",
+            "visite": "audio/theme-6-semaine-3/visite.mp3"
+        }
     }
-    /*      
-    
-    
-          {
-            title:'Son "a"',
-            text:'Mon ami joue à la balle avec son chat. Sur la table, il y a un gâteau au chocolat et des cadeaux.'
-          },
-          {
-            title:'Son "e"',
-            text:'Mon petit frère s\'amuse avec son amie Rose. Il y a une jolie tortue sur mon chemin.'
-          },
-          {
-            title:'Son "i"',
-            text:'Je fais de la bicyclette tous les lundis. Les images de ce livre me font rire.'
-          },
-          {
-            title:'Son "u"',
-            text:'Bruno boit un jus de légumes. Julie aime la musique. Elle joue de la flue.'
-          },
-          {
-            title:'Son "ui"',
-            text:'La pluie tombera toute la nuit. Une maman prépare une salade de fruits et fait cuire les biscuits.'
-          },
-          {
-            title:'Son "o"',
-            text:'Aujourd\'hui, Caroline porte un manteau jaune. J\'écris les mots soleil et animal au tableau.'
-          },
-          {
-            title:'Son "é"',
-            text:'Après le diner, vous pourrez jouer à la poupée. Chaque année les pompiers viennent à l\'école. J\'ai passé une journée de congé agréable chez Émile.'
-          },
-          {
-            title:'Son "è"',
-            text:'Pour la fête de Noël les jumelles souhaitent avoir beaucoup de jouets. Ma mère n\'aime pas l\'hiver avec ses tempêtes de neige. Il est un excellent cuisinier.'
-          },
-          {
-            title:'Son "s"',
-            text:'Tous les samedis, ce monsieur prend sa bicyclette pour aller au cinéma. Ce garçon verse ses céréales dans une grosse tasse.'
-          },
-          {
-            title:'Son "z"',
-            text:'Je mange des raisins et des fraises dans la cuisine. Ma cousine porte une blouse rose et une jupe grise. Il fait zéro degré.'
-          },
-          {
-            title:'Son "j"',
-            text:'La gentille magicienne jongle avec des oranges. Les jumeaux jouent dans le jardin tous les jours.'
-          },
-          {
-            title:'Son "ch"',
-            text:'Il cherche son chandail et son chapeau. Dans le champ, je vois une vache, un cheval, une chèvre et un cochon.'
-          },
-          {
-            title:'Son "on"',
-            text:'Le garçon joue avec son camion de pompier dans le salon. Des flocons de neige tombent sur la montagne.'
-          },
-          {
-            title:'Son "ou"',
-            text:'Ma cousine joue avec ses poupées ou ses toutous. Où sont mes souliers de couleur rouge?'
-          },
-          {
-            title:'Son "eu"',
-            text:'Ma soeur veut un oeuf au déjeuner. Cette jeune chanteuse est heureuse, car elle a reçu des fleurs bleues.'
-          },
-    
-          {
-            title:'Sons "un" et "oi"',
-            text:'J\'ai vu trois étoiles filantes lundi soir. Il y a aucun oiseau brun dans ce bois.'
-          },
-          {
-            title:'Son "oin"',
-            text:'Je prends soin des animaux. Mon oncle qui habite au loin téléphone au moins une fois par semaine.'
-          },
-          {
-            title:'Son "in"',
-            text:'Mon cousin portera son imperméable demain. Mon chien n\'a plus faim. Il a le ventre plein.'
-          },
-          {
-            title:'Son "ill"',
-            text:'Le soleil brille à travers le vitrail; une merveille! La fille boit son jus avec une paille. Sur ma feuille, je dessine un écureuil, une grenouille et un papillon. Je cherche mes crayons. Je suis joyeux. Je pars en voyage découvrir un nouveau pays.'
-          }
-    */
-  ]
-
+];
 })(this)
