@@ -211,6 +211,11 @@ Seul point hors de portée des tests unitaires :
 - La disambiguïsation **ESPACE clavier vs espace iOS** via `keydown`/`beforeinput`
   sur iOS Safari (clavier logiciel). À confirmer sur un vrai iPhone.
 - Comportement réel de la dictée iOS (incrémental vs bloc, espaces parasites).
+- **Ordre des accents :** `tryAlign` suppose que le nom d'accent suit toujours sa
+  lettre (« E. Accent aiguë ») ou tient lieu d'une voyelle avalée (« G. Accent
+  aiguë »), conformément à tous les exemples connus. Si iOS produisait un jour
+  l'ordre inverse (accent avant la voyelle), le mot retomberait sur la transcription
+  brute (affiché comme faute) — jamais un faux positif. À surveiller sur appareil.
 
 ## 9. Hors scope (YAGNI)
 
