@@ -36,6 +36,13 @@ const CASES = [
   ['flûte',    'F. L. U. Accent complexe T E.',              'flûte'],
   ['noël',     'N. O. E tréma L.',                           'noël'],
   ['leçon',    'L. E. C. O N.',                              'leçon'],
+  // --- Cas délicats: voyelle avalée & lettre parasite ---
+  ['généreux', 'G. Accent aiguë, N E. Accent aigu RE U. X.', 'généreux'],
+  ['flûte',    'F. L. U. X. Complexe T E.',                  'flûte'],
+  // --- Vraies fautes (la tolérance d'accent ne masque pas une faute de lettre) ---
+  ['amour',     'A. M. O. R.',                  'amor'],
+  ['spectacle', 'S. P. E. K. T. A. C. L. E.',   'spektacle'],
+  ['présent',   'P. R. E. S. A. N. T.',         'presant'],
 ];
 
 for (const [expected, raw, want] of CASES) {

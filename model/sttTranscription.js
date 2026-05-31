@@ -50,12 +50,52 @@
     return out;
   }
 
+  // Walk the expected word; consume input tokens tolerantly.
+  // Returns the accented expected word on success, or null on a real letter mismatch.
+  function tryAlign(tokens, expected){
+    var out = "";
+    var t = 0;
+    for (var e = 0; e < expected.length; e++){
+      var ec = expected[e];
+      var ecLower = ec.toLowerCase();
+      var ecBase = deaccent(ecLower);
+      if (!/[a-z]/.test(ecBase)){
+        out += ec;            // apostrophe / hyphen / punctuation: taken from expected
+        continue;
+      }
+      var ecAccented = (ecLower !== ecBase);   // é, è, ç, ô, …
+      var matched = false;
+      while (t < tokens.length){
+        var tok = tokens[t];
+        if (tok.type === "accent"){
+          if (ecAccented){     // iOS swallowed the vowel, emitted only the accent name
+            out += ec; t++; matched = true; break;
+          }
+          t++; continue;       // stray marker before a plain letter: skip it
+        }
+        if (deaccent(tok.ch) === ecBase){
+          out += ec; t++;
+          if (ecAccented && t < tokens.length && tokens[t].type === "accent") t++;
+          matched = true; break;
+        }
+        // non-matching letter immediately followed by a marker => garbled
+        // "accent ..." phrase (e.g. "X. Complexe"): absorb the parasite + marker.
+        if (t + 1 < tokens.length && tokens[t + 1].type === "accent"){ t += 2; continue; }
+        return null;           // genuine letter mismatch
+      }
+      if (!matched) return null;
+    }
+    while (t < tokens.length && tokens[t].type === "accent") t++;
+    if (t < tokens.length) return null;   // extra dictated letters
+    return out;
+  }
+
   function sttToWord(brut, attendu){
     attendu = attendu || "";
     var tokens = tokenize(brut);
-    var letters = rawTranscription(tokens);
-    if (letters === deaccent(attendu.toLowerCase())) return attendu;
-    return letters;
+    var aligned = tryAlign(tokens, attendu);
+    if (aligned !== null) return aligned;
+    return rawTranscription(tokens);
   }
 
   return { sttToWord: sttToWord, tokenize: tokenize, deaccent: deaccent };
