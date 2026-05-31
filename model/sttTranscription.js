@@ -52,6 +52,12 @@
 
   // Walk the expected word; consume input tokens tolerantly.
   // Returns the accented expected word on success, or null on a real letter mismatch.
+  // Assumption (matches observed iOS output): an accent name always FOLLOWS its
+  // letter ("E. Accent aiguë") or stands alone for a vowel iOS swallowed
+  // ("G. Accent aiguë" for "gé..."). The reverse ordering (accent name before its
+  // vowel) does not occur when spelling aloud, so it is not handled; if it ever did,
+  // it would safely fall back to the raw transcription (shown as a mistake), never a
+  // false positive.
   function tryAlign(tokens, expected){
     var out = "";
     var t = 0;
