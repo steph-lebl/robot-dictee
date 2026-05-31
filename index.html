@@ -12,6 +12,7 @@
   <script type="text/javascript" src="model/paragraph.js"></script>
   <script type="text/javascript" src="model/segment.js"></script>
   <script type="text/javascript" src="model/word.js"></script>
+  <script type="text/javascript" src="model/sttTranscription.js"></script>
 
   <script type="text/javascript" src="speechSynthesisTextToSpeechEngine.js"></script>
   <script type="text/javascript" src="staticAudioTextToSpeechEngine.js"></script>
@@ -39,7 +40,7 @@
     <img src="./robot-64.png">
   </a>
   <a id="mainTitle" href="./index.html">
-    <h1>Robot Dictée</h1>
+    <h1>Robot Dictée<span class="stt-badge" data-bind="visible: sttMode"> — Épeler les mots (Reconnaissance vocale iOS)</span></h1>
   </a>
   <div class="header-right">
     <a href="./index.html">Accueil</a>
@@ -100,7 +101,8 @@
         </div>
       </div>      
 
-      <input id="currentWordText" type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false'/>
+      <input id="currentWordText" type="text" name="currentWordText" autofocus data-bind='textInput: currentWordText, visible:dictation().isFinished()===false, event:{ keydown: onInputKeyDown }'/>
+      <div class="stt-preview" data-bind="visible: sttMode() &amp;&amp; dictation() &amp;&amp; dictation().isFinished()===false, text: currentWordPreview"></div>
 
       <button id="repeat-button" title="Raccourci: ENTER pour répéter" type="submit">Répéter</button>
 

@@ -113,3 +113,7 @@ h4{
   float: right;
 }
 
+.stt-badge { font-size: 0.5em; font-weight: normal; opacity: 0.85; }
+.stt-preview { margin-top: 0.5em; font-size: 1.2em; color: #555; min-height: 1.2em; }
+.stt-preview:before { content: "→ "; }
+

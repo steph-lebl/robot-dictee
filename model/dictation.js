@@ -18,11 +18,12 @@
 
     return {
       paragraphs,
+      currentExpectedWord,
       commitCurrentWord,
       sayCurrentSegment,
       segmentSaid:_segmentSaid,
       isStarted,
-      isFinished, 
+      isFinished,
       avgNumOfWordsForOneMistake,
       noMistakes
     }
@@ -47,6 +48,11 @@
 
     function currentWord(){
       return words()[_currentWordIndex()];
+    }
+
+    function currentExpectedWord(){
+      var w = words()[_currentWordIndex()];
+      return w ? w.expected() : "";
     }
 
     function words(){

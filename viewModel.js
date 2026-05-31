@@ -1,7 +1,7 @@
 (function(global){
   global.robotDictee.createViewModel=createViewModel;
 
-  function createViewModel(textToSpeechEngine){
+  function createViewModel(textToSpeechEngine, sttMode){
     var _predefinedDictations = ko.observable(global.robotDictee.predefinedDictations)
     var _groupedDictations = ko.computed(function() {
       var groups = {};
@@ -22,6 +22,13 @@
     var _currentWordText = ko.observable("");
     var _segmentSaidSubscription=null;
     var _currentPage =  ko.observable('newDictation');
+    var _sttMode = ko.observable(!!sttMode);
+    var _currentWordPreview = ko.computed(function(){
+      if(!_sttMode()) return "";
+      var d = _dictation();
+      if(!d) return "";
+      return global.robotDictee.sttToWord(_currentWordText(), d.currentExpectedWord());
+    });
 
     _currentWordText.subscribe(onCurrentWordTextChanged);
 
@@ -37,9 +44,13 @@
       showAboutPage,
       showMobileHowToPage,
       currentPage:_currentPage
+      ,sttMode:_sttMode
+      ,currentWordPreview:_currentWordPreview
+      ,onInputKeyDown
     }
 
     function onCurrentWordTextChanged(newValue){
+      if(_sttMode()) return;
       if(getLastChar(_currentWordText())==' '){
         commitWord();
       }
@@ -53,6 +64,23 @@
       var valueToCommit = _currentWordText().rtrim();
       _currentWordText("");
       _dictation().commitCurrentWord(valueToCommit);
+    }
+
+    function onInputKeyDown(data, event){
+      if(_sttMode() && (event.key === ' ' || event.code === 'Space' || event.keyCode === 32)){
+        event.preventDefault();
+        commitWordStt();
+        return false;
+      }
+      return true;
+    }
+
+    function commitWordStt(){
+      var raw = _currentWordText();
+      var expected = _dictation().currentExpectedWord();
+      var value = global.robotDictee.sttToWord(raw, expected);
+      _currentWordText("");
+      _dictation().commitCurrentWord(value);
     }
 
     function sayCurrentSegment(event){
