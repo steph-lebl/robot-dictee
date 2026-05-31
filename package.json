@@ -4,7 +4,7 @@
   "description": "Robot Dictée permet de faire une dictée de manière autonome et d'être corrigé automatiquement au fur et à mesure. [Essayez-le](https://steph-lebl.github.io/robot-dictee/)!",
   "main": "main.js",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test 'model/spec/*.test.js'"
   },
   "repository": {
     "type": "git",
